@@ -74,11 +74,7 @@ h3{
   display: grid;
   gap: 5%;
 }
-p1 {
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-}
+
 p{
   color: black;
   text-align: center;

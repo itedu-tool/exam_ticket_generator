@@ -172,8 +172,6 @@ export default {
 }
 
 .profile__inner-exit a {
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
@@ -285,8 +283,6 @@ export default {
 }
 
 .archive__inner-options a {
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;

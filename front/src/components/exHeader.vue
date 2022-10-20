@@ -46,8 +46,6 @@ export default {
 /* .header__menu {
 } */
 .header__menu-item {
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
@@ -75,8 +73,6 @@ export default {
 } */
 
 .header__inner-two-title h1 {
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 31px;
@@ -85,8 +81,6 @@ export default {
 }
 
 .header__inner-two-title p {
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 400;
   font-size: 28px;
   line-height: 29px;
@@ -98,8 +92,6 @@ export default {
 }
 
 .header__inner-two-title p span {
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;

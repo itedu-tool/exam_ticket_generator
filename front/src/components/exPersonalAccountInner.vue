@@ -109,8 +109,6 @@ export default {
 }
 
 .exPersonalAccount__inner p {
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -124,8 +122,6 @@ export default {
 }
 
 .exPersonalAccount__inner h2 {
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;

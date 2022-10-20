@@ -1,4 +1,3 @@
-/* eslint-disable */
 <template>
   <footer class="footer">
     <div class="container">
@@ -48,8 +47,16 @@ export default {
   display: flex;
 }
 
+.footer__info h2 {
+  margin-bottom: 15px;
+}
+
 .footer__info a {
   color: #3a373d;
+}
+
+.footer__info p:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .footer__info-section:not(:last-child) {

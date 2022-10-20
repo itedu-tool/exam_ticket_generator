@@ -1,4 +1,3 @@
-/* eslint-disable */
 <template>
   <header class="header">
     <div class="header__wrapper header__wrapper--blue">
@@ -15,7 +14,7 @@
       <div class="container">
         <div class="header__inner-two">
           <div class="header__inner-two-image">
-            <a href="#"><img src="../assets/icon-VGYIT.svg" alt="Значок ВГУИТ" /></a>
+            <a href="#"><img src="../assets/img/icon-VGYIT.svg" alt="Значок ВГУИТ" /></a>
           </div>
           <div class="header__inner-two-title">
             <h1><a href="#">Генератор экзаменационных билетов</a></h1>

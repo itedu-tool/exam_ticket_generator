@@ -88,11 +88,6 @@ p{
   text-align: center;
 }
 
-p1 {
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-}
 
 .container {
   width: 100%;

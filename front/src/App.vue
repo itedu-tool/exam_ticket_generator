@@ -1,13 +1,13 @@
 <template>
-  <Index></Index>
+  <index></index>
 </template>
 <script>
-import Index from './components/index.vue';
+import index from './components/index.vue';
 
 export default {
   name: 'App',
   components: {
-    Index,
+    index,
   },
 };
 </script>

@@ -29,7 +29,7 @@
             </form>
             <button class="button"> Зарегистрироваться </button>
             <div class="registration">
-              <a href="Authorization.html">Уже есть аккаунт? Войти</a>
+              <a href="Authorization.vue">Уже есть аккаунт? Войти</a>
 
             </div>
 

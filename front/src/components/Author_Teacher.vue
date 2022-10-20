@@ -14,10 +14,10 @@
             </div>
             <form action="">
               <div class="wrapper__form">
-                <p><input  class="form__active" placeholder="ФИО" type="text" id="name"></p>
-                <p><input  class="form__active" placeholder="E-mail" type="email" id="email"></p>
-                <p><input  class="form__active" placeholder="Придумайте пароль" type="text" id="password"></p>
-                <p><input  class="form__active" placeholder="Повторите пароль" type="text"></p>
+                <input name="name" class="form__active" placeholder="ФИО" type="text" id="name" />
+                <input name="name" class="form__active" placeholder="E-mail" type="email" id="email" />
+                <input name="name" class="form__active" placeholder="Придумайте пароль" type="text" id="password" />
+                <input name="name" class="form__active" placeholder="Повторите пароль" type="text" />
               </div>
               <button class="button"> Войти </button>
               <div class="registration">

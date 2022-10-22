@@ -37,4 +37,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/tickets_generation_one.css"></style>
+<style scoped src="@/css/ticketsGenerationOne.css"></style>

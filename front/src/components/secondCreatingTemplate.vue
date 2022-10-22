@@ -27,4 +27,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/second_creating_template.css"></style>
+<style scoped src="@/css/secondCreatingTemplate.css"></style>

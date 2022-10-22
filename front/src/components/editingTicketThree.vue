@@ -27,4 +27,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/editing_ticket_three.css"></style>
+<style scoped src="@/css/editingTicketThree.css"></style>

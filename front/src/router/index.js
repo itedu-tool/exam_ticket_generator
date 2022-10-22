@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import view__ticket from '../components/view_ticket.vue';
+import view__ticket from '../components/viewTicket.vue';
 import ticket__example from '../components/ticket_example.vue';
-import first__creating__template from '../components/first_creating_template.vue';
-import second__creating__template from '../components/second_creating_template.vue';
-import editing__ticket from '../components/editing_ticket_one.vue';
-import template__editing__one from '../components/editing_ticket_two.vue';
-import template__editing__two from '../components/editing_ticket_three.vue';
-import generation__ticket from '../components/tickets_generation_one.vue';
-import generation__ticket__two from '../components/tickets_generation_two.vue';
+import first__creating__template from '../components/firstCreatingTemplate.vue';
+import second__creating__template from '../components/secondCreatingTemplate.vue';
+import editing__ticket from '../components/editingTicketOne.vue';
+import template__editing__one from '../components/editingTicketTwo.vue';
+import template__editing__two from '../components/editingTicketThree.vue';
+import generation__ticket from '../components/ticketsGenerationOne.vue';
+import generation__ticket__two from '../components/ticketsGenerationTwo.vue';
 
 const routes = [
   {

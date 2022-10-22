@@ -28,4 +28,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/editing_ticket_two.css"></style>
+<style scoped src="@/css/editingTicketTwo.css"></style>

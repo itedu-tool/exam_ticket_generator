@@ -27,4 +27,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/first_creating_template.css"></style>
+<style scoped src="@/css/firstCreatingTemplate.css"></style>

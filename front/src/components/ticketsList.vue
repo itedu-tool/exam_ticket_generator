@@ -1,55 +1,18 @@
 <template>
   <div class="grid__container">
-    <figure class="main__block__container">
-      <img class="main__block__image" src="../assets/tickcet.png" alt="Билет"/>
-      <figcaption class="figcaption__image">Билет 1</figcaption>
-    </figure>
-
-    <figure class="main__block__container">
-      <img class="main__block__image" src="../assets/tickcet.png" alt="Билет"/>
-      <figcaption class="figcaption__image">Билет 2</figcaption>
-    </figure>
-
-    <figure class="main__block__container">
-      <img class="main__block__image" src="../assets/tickcet.png" alt="Билет"/>
-      <figcaption class="figcaption__image">Билет 3</figcaption>
-    </figure>
-
-    <figure class="main__block__container">
-      <img class="main__block__image" src="../assets/tickcet.png" alt="Билет"/>
-      <figcaption class="figcaption__image">Билет 4</figcaption>
-    </figure>
-
-    <figure class="main__block__container">
-      <img class="main__block__image" src="../assets/tickcet.png" alt="Билет"/>
-      <figcaption class="figcaption__image">Билет 5</figcaption>
-    </figure>
-
-    <figure class="main__block__container">
-      <img class="main__block__image" src="../assets/tickcet.png" alt="Билет"/>
-      <figcaption class="figcaption__image">Билет 6</figcaption>
-    </figure>
-
-    <figure class="main__block__container">
-      <img class="main__block__image" src="../assets/tickcet.png" alt="Билет"/>
-      <figcaption class="figcaption__image">Билет 7</figcaption>
-    </figure>
-
-    <figure class="main__block__container">
-      <img class="main__block__image" src="../assets/tickcet.png" alt="Билет"/>
-      <figcaption class="figcaption__image">Билет 8</figcaption>
-    </figure>
-
-    <figure class="main__block__container">
-      <img class="main__block__image" src="../assets/tickcet.png" alt="Билет"/>
-      <figcaption class="figcaption__image">Билет 9</figcaption>
-    </figure>
-
-    <figure class="main__block__container">
-      <img class="main__block__image" src="../assets/tickcet.png" alt="Билет"/>
-      <figcaption class="figcaption__image">Билет 10</figcaption>
-    </figure>
+    <TicketComponent v-for="number in numbers" :key="number" :identificator="number" />
   </div>
 </template>
-<script></script>
+<script>
+import TicketComponent from '@/components/ticketComponent.vue';
+
+export default {
+  components: { TicketComponent },
+  data: function () {
+    return {
+      numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    };
+  },
+};
+</script>
 <style scoped src="@/css/ticketsList.css"></style>

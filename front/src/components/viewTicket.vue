@@ -20,4 +20,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/view_ticket.css"></style>
+<style scoped src="@/css/viewTicket.css"></style>

@@ -1,51 +1,31 @@
 <template>
   <h1 class="text">База вопросов</h1>
   <div class="questions">
-    <div style="display: flex; align-items: center">
-      <h1 class="questions__title">Теоритические вопросы</h1>
-      <a href="#" class="image__doc"></a>
-    </div>
-    <div style="display: flex; align-items: center">
-      <h1 class="questions__title">Практические занятия</h1>
-      <a href="#" class="image__doc"></a>
-    </div>
+    <TypeOfQuestions typeOfQuestions="Теоритические вопросы" />
+    <TypeOfQuestions typeOfQuestions="Практические задания" />
   </div>
 
   <div class="ul__container">
     <ul class="ul">
-      <div class="ul__element" style="background-color: rgba(222, 226, 234, 1)">
-        <input class="ul__input" placeholder="Вопрос 4" />
-        <button class="add__block">Добавить</button>
-      </div>
-      <div class="ul__element" style="background-color: rgba(222, 226, 234, 1)">
-        <input class="ul__input" placeholder="Вопрос 1" disabled />
-        <button class="delete__block" type="reset">X</button>
-      </div>
-      <div class="ul__element" style="background-color: rgba(222, 226, 234, 1)">
-        <input class="ul__input" placeholder="Вопрос 2" disabled />
-        <button class="delete__block" type="reset">X</button>
-      </div>
-      <div class="ul__element" style="background-color: rgba(222, 226, 234, 1)">
-        <input class="ul__input" placeholder="Вопрос 3" disabled />
-        <button class="delete__block" type="reset">X</button>
-      </div>
+      <AddUlElement msg="Вопрос 4" />
+      <DeleteUlElement msg="Вопрос 1" />
+      <DeleteUlElement msg="Вопрос 2" />
+      <DeleteUlElement msg="Вопрос 3" />
     </ul>
 
     <ul class="ul">
-      <div class="ul__element" style="background-color: rgba(222, 226, 234, 1)">
-        <input class="ul__input" placeholder="Задание 3" />
-        <button class="add__block">Добавить</button>
-      </div>
-      <div class="ul__element" style="background-color: rgba(222, 226, 234, 1)">
-        <input class="ul__input" placeholder="Задание 1" disabled />
-        <button class="delete__block" type="reset">X</button>
-      </div>
-      <div class="ul__element" style="background-color: rgba(222, 226, 234, 1)">
-        <input class="ul__input" placeholder="Задание 2" disabled />
-        <button class="delete__block" type="reset" @click="deleteElement()">X</button>
-      </div>
+      <AddUlElement msg="Задание 3" />
+      <DeleteUlElement msg="Задание 1" />
+      <DeleteUlElement msg="Задание 2" />
     </ul>
   </div>
 </template>
-<script></script>
+<script>
+import TypeOfQuestions from './typeOfQuestions.vue';
+import AddUlElement from './addUlElement.vue';
+import DeleteUlElement from './deleteUlElement.vue';
+export default {
+  components: { TypeOfQuestions, AddUlElement, DeleteUlElement },
+};
+</script>
 <style scoped src="@/css/databaseQuestions.css"></style>

@@ -24,4 +24,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/tickets_generation_two.css"></style>
+<style scoped src="@/css/ticketsGenerationTwo.css"></style>

@@ -1,4 +1,5 @@
 <template>
+  <!-- Контейнер с удалением вопроса -->
   <div class="ul__element">
     <input class="ul__input" :placeholder="msg" disabled />
     <button class="delete__block" type="reset">X</button>

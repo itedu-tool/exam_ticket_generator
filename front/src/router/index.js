@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import view__ticket from '../components/viewTicket.vue';
-import ticket__example from '../components/ticket_example.vue';
+import ticket__example from '../components/ticketExample.vue';
 import first__creating__template from '../components/firstCreatingTemplate.vue';
 import second__creating__template from '../components/secondCreatingTemplate.vue';
 import editing__ticket from '../components/editingTicketOne.vue';

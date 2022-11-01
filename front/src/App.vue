@@ -1,14 +1,27 @@
 <template>
-  <index></index>
+  <!-- Шапка.Статичная.Не изменять -->
+  <header>
+    <publicHeader></publicHeader>
+  </header>
+
+  <!-- Основной контент.Вставить свою компоненту -->
+  <main>
+    <publicMain></publicMain>
+  </main>
+
+  <!-- Подвал.Статичный.Не изменять -->
+  <footer>
+    <publicFooter></publicFooter>
+  </footer>
 </template>
 <script>
-import index from './components/index.vue';
+import publicHeader from './components/publicHeader.vue';
+import publicMain from './components/publicMain.vue';
+import publicFooter from './components/publicFooter.vue';
 
 export default {
   name: 'App',
-  components: {
-    index,
-  },
+  components: { publicFooter, publicMain, publicHeader },
 };
 </script>
 

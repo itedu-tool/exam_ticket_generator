@@ -1,4 +1,5 @@
 <template>
+  <!-- Генерация билета. Вторая страница.-->
   <div class="flex-container">
     <div class="flex-size">
       <h1 class="title">Генерация билетов</h1>

@@ -1,6 +1,5 @@
 <template>
-  <PublicHeader />
-
+  <!-- Основной контент страницы. Изменяемый для разных страниц. -->
   <main class="main">
     <div class="tickets__control">
       <h1 class="control__title">Управление билетами</h1>
@@ -16,16 +15,11 @@
       <router-view />
     </div>
   </main>
-
-  <PublicFooter />
 </template>
 
 <script>
-import PublicHeader from './publicHeader.vue';
-import PublicFooter from './publicFooter.vue';
 export default {
   name: 'MainIndex',
-  components: { PublicHeader, PublicFooter },
 
   methods: {
     mainSizeMin: function () {
@@ -38,4 +32,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/style.css"></style>
+<style scoped src="@/css/publicMain.css"></style>

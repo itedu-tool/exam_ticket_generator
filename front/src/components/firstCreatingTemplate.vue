@@ -1,4 +1,5 @@
 <template>
+  <!-- Создание билета. Первая страница с заполнением билета различной информацией. -->
   <div class="first__creating__template">
     <div class="flex">
       <h1 class="creating__template">Создание шаблона 1/2</h1>

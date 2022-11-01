@@ -1,4 +1,5 @@
 <template>
+  <!-- Редактирование билета. Вторая страница с информацией о билете.-->
   <div class="editing__ticket__two">
     <div class="flex">
       <h1 class="creating__template">Редактирование шаблона 1/2</h1>

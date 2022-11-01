@@ -1,4 +1,5 @@
 <template>
+  <!-- Блок с базой вопросов -->
   <h1 class="text">База вопросов</h1>
   <div class="questions">
     <TypeOfQuestions typeOfQuestions="Теоритические вопросы" />

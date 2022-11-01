@@ -1,4 +1,5 @@
 <template>
+  <!--Просмотр билета. Первая страница со списком билетов.-->
   <div class="view__ticket">
     <h1 class="main__block__title__text">Просмотр билета</h1>
     <h1 class="main__block__text">Выбирите билет:</h1>

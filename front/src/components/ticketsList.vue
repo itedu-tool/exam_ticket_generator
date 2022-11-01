@@ -1,4 +1,5 @@
 <template>
+  <!-- Контейнер с билетами-->
   <div class="grid__container">
     <TicketComponent v-for="number in numbers" :key="number" :identificator="number" />
   </div>

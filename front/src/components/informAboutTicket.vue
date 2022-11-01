@@ -1,3 +1,4 @@
+<!-- Контейнер с информацией о билете -->
 <template>
   <div class="grid__container">
     <InputFields msg="Цикловая коммисия" />

@@ -1,3 +1,6 @@
+*{
+  font-family: 'Inter', sans-serif;
+}
 .footer {
     display: flex;
     background-color: rgba(222, 226, 234, 1);

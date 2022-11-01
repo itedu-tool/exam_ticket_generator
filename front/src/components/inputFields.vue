@@ -1,4 +1,5 @@
 <template>
+  <!-- Поле ввода информации -->
   <div class="container">
     <h1 class="input__title">{{ msg }}</h1>
     <input class="input" type="text" />

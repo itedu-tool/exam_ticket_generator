@@ -1,4 +1,5 @@
 <template>
+  <!-- Редактирование билета. Третья страница с редактированием вопросов.-->
   <div class="editing__ticket__three">
     <div class="flex-container">
       <h1 class="title">Редактирование шаблона 2/2</h1>

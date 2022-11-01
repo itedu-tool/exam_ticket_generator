@@ -1,4 +1,5 @@
 <template>
+  <!-- Статичный подвал страницы-->
   <footer class="footer">
     <div class="lists">
       <ul class="about">

@@ -1,4 +1,5 @@
 <template>
+  <!-- Просмотр билета. Вторая страница с примером готового билета. -->
   <div class="ticket__example">
     <div class="title">
       <router-link class="back" to="/">
@@ -17,7 +18,7 @@
             Направление подготовки/специальность: 09.02.07 Информационные системы и программирование
           </h1>
           <h1 class="item__name">Основы алгоритмизации и программирования</h1>
-          <h1>БИЛЕТ № 1</h1>
+          <h1>БИЛЕТ №1</h1>
           <ol>
             <li>Обзор языков программирования. Области применения языков программирования.</li>
             <li>Процедуры и функции</li>
@@ -41,4 +42,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/ticket_example.css"></style>
+<style scoped src="@/css/ticketExample.css"></style>

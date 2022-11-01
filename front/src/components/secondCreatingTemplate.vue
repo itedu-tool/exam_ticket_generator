@@ -1,5 +1,6 @@
 <template>
-  <div class="editing__ticket__three">
+  <!-- Создание билета. Вторая страница с вопросами.-->
+  <div class="second__creating__template">
     <div class="flex-container">
       <h1 class="title">Создание шаблона 2/2</h1>
 

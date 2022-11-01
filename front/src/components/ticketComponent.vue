@@ -1,3 +1,4 @@
+<!-- Билет -->
 <template>
   <figure class="main__block__container">
     <img class="main__block__image" src="../assets/tickcet.png" alt="Билет" />

@@ -1,27 +1,27 @@
 <template>
   <div class="exPersonalAccount">
-    <exHeader></exHeader>
+    <publicHeader></publicHeader>
     <div class="wrapper">
       <main class="main">
         <div class="container">
           <exPersonalAccountInner></exPersonalAccountInner>
         </div>
       </main>
-      <exFooter></exFooter>
+      <publicFooter></publicFooter>
     </div>
   </div>
 </template>
 
 <script>
-import exHeader from '../components/exHeader.vue';
-import exFooter from '../components/exFooter.vue';
+import publicHeader from '../components/common/publicHeader.vue';
+import publicFooter from '../components/common/publicFooter.vue';
 import exPersonalAccountInner from '../components/exPersonalAccountInner.vue';
 
 export default {
   name: 'exPersonalAccount',
   components: {
-    exHeader,
-    exFooter,
+    publicHeader,
+    publicFooter,
     exPersonalAccountInner,
   },
 };

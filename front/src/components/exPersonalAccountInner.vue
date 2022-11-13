@@ -89,11 +89,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'exPersonalAccountInner',
-};
-</script>
+<script></script>
 
 <style>
 /*personal account-----------*/

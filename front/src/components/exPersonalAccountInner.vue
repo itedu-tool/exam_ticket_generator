@@ -179,7 +179,7 @@
 
 .detailed-information__inner {
   background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   width: auto;
 
   padding: 30px;
@@ -248,7 +248,7 @@
   width: auto;
 
   background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   padding: 30px;
 }
@@ -265,7 +265,7 @@
 .archive__inner {
   width: auto;
   background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   padding: 30px;
 }
 

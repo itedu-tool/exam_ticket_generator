@@ -14,6 +14,16 @@ export default {
       numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     };
   },
+  /*methods: {
+    clickOnElement(event) {
+      let target = event.target;
+      if (target.tagName === 'FIGURE' || target.tagName === 'IMG' || target.tagName === 'FIGCAPTION') {
+       document.querySelector('.figcaption__image').classList.add('bottom')
+      } else {
+        return;
+      }
+    },
+  },*/
 };
 </script>
 <style scoped src="@/css/ticketsList.css"></style>

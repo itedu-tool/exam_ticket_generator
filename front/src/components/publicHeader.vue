@@ -1,5 +1,4 @@
 <template>
-  <!-- Статичная шапка страницы-->
   <header class="header">
     <nav class="nav">
       <div class="nav__body">

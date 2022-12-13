@@ -12,8 +12,8 @@
       <InformAboutTicket />
 
       <div class="image">
-        <router-link to="/editing" class="back__image"></router-link>
-        <router-link to="/editing/template__editing__two" class="forward__image"></router-link>
+        <router-link :to="{ name: 'editing' }" class="back__image"></router-link>
+        <router-link :to="{ name: 'templateEditingThree' }" class="forward__image"></router-link>
       </div>
     </div>
     <router-view />
@@ -24,7 +24,7 @@
 import InformAboutTicket from '@/components/informAboutTicket.vue';
 
 export default {
-  name: 'editing__ticket__two',
+  name: 'editingTicketTwo',
   components: { InformAboutTicket },
 };
 </script>

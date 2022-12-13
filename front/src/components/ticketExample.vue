@@ -2,11 +2,11 @@
   <!-- Просмотр билета. Вторая страница с примером готового билета. -->
   <div class="ticket__example">
     <div class="title">
-      <router-link class="back" to="/">
+      <router-link class="back" :to="{ name: 'viewTicket' }">
         <div class="back__image"></div>
-        <h1 class="back__text">Назад</h1>
+        <p class="back__text">Назад</p>
       </router-link>
-      <h1 class="main__block__title">Просмотр билета</h1>
+      <p class="main__block__title">Просмотр билета</p>
     </div>
 
     <div class="flex-container">
@@ -38,7 +38,7 @@
 
 <script>
 export default {
-  name: 'ticket__example',
+  name: 'ticketExample',
 };
 </script>
 

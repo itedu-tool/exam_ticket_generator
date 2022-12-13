@@ -20,6 +20,7 @@
   .lists__link {
     text-decoration: none;
     color: rgba(58, 55, 61, 1);
+    margin: 10px;
   }
   
   .about {
@@ -33,7 +34,7 @@
   padding: 0;
   text-align: center;
   list-style: none;
-  width: calc(calc(1vw + 1vh) * 4.25);
+  width: calc(calc(1vw + 1vh) * 5);
   margin-top: 10px;
 }
 .authors__link {

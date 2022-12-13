@@ -8,7 +8,7 @@
 
     <div class="main__button__box">
       <div class="back__image"></div>
-      <router-link to="/editing/template__editing__one">
+      <router-link :to="{ name: 'templateEditingTwo' }">
         <div class="forward__image"></div>
       </router-link>
     </div>
@@ -19,7 +19,7 @@
 <script>
 import TicketsList from './ticketsList.vue';
 export default {
-  name: 'editing__ticket__one',
+  name: 'editingTicketOne',
   components: { TicketsList },
 };
 </script>

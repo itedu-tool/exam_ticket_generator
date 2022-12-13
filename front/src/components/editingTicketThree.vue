@@ -10,7 +10,7 @@
         <div class="box__image">
           <button class="button">Сохранить изменения</button>
           <div class="image">
-            <router-link to="/editing/template__editing__one" class="back__image"></router-link>
+            <router-link :to="{ name: 'templateEditingTwo' }" class="back__image"></router-link>
             <a class="forward__image"></a>
           </div>
         </div>
@@ -23,7 +23,7 @@
 <script>
 import DatabaseQuestions from './databaseQuestions.vue';
 export default {
-  name: 'editing__ticket__three',
+  name: 'editingTicketThree',
   components: { DatabaseQuestions },
 };
 </script>

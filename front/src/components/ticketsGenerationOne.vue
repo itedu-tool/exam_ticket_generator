@@ -25,7 +25,7 @@
         <h1 class="tickets__text">Билетов</h1>
       </div>
       <div class="router-link__box__size">
-        <router-link class="router-link" to="/generation/successfully">Сгенерировать</router-link>
+        <router-link class="router-link" :to="{ name: 'successfully' }">Сгенерировать</router-link>
       </div>
       <router-view />
     </div>
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  name: 'generation__ticket',
+  name: 'generationTicket',
 };
 </script>
 

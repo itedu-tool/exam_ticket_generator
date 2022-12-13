@@ -2,13 +2,14 @@
 <template>
   <figure class="main__block__container" @click="clickOnElement">
     <img class="main__block__image" src="../assets/tickcet.png" alt="Билет" />
-    <figcaption class="figcaption__image">Билет {{ identificator }}</figcaption>
+    <figcaption class="figcaption__image">Билет {{ number }}</figcaption>
   </figure>
 </template>
 <script>
 export default {
-  rops: {
-    identificator: Number,
+  name: 'ticketComponent',
+  props: {
+    number: Number,
   },
   /*methods: {
     clickOnElement(event) {

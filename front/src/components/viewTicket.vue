@@ -7,7 +7,7 @@
     <TicketsList />
 
     <div class="main__router-link__box">
-      <router-link to="/ticket__example" class="main__block__router-link">Просмотреть</router-link>
+      <router-link :to="{ name: 'ticketExample' }" class="main__block__router-link">Просмотреть</router-link>
     </div>
     <router-view />
   </div>
@@ -16,7 +16,7 @@
 <script>
 import TicketsList from './ticketsList.vue';
 export default {
-  name: 'view__ticket',
+  name: 'viewTicket',
   components: { TicketsList },
 };
 </script>

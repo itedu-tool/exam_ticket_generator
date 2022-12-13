@@ -13,7 +13,7 @@
 
       <div class="image">
         <a class="back__image"></a>
-        <router-link to="/creating/second__creating" class="forward__image"></router-link>
+        <router-link :to="{ name: 'secondCreating' }" class="forward__image"></router-link>
       </div>
     </div>
     <router-view />
@@ -23,7 +23,7 @@
 <script>
 import InformAboutTicket from './informAboutTicket.vue';
 export default {
-  name: 'first__creating__template',
+  name: 'firstCreatingTemplate',
   components: { InformAboutTicket },
 };
 </script>

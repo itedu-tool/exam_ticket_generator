@@ -18,10 +18,12 @@
   .nav__body {
     margin-right: calc(calc(1vw + 1vh) * 5);
   }
-  .nav__text:first-child {
+  .nav__text{
     margin-right: calc(calc(1vw + 1vh) * 4);
     border-bottom: calc(calc(1vw + 1vh) / 8.5) solid rgba(255, 255, 255, 1);
     text-decoration-skip-ink: none;
+    color: #fff;
+    text-decoration: none;
   }  
   .title__box {
     display: flex;

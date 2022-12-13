@@ -1,100 +1,112 @@
 <template>
-  <div class="exPersonalAccount__inner">
-    <div class="profile">
-      <div class="profile__inner">
-        <div class="profile__inner-content">
-          <div class="profile__inner-img">
-            <img src="../assets/img/icon-profile.svg" alt="Аватар" />
+  <section class="personalAccount">
+    <div class="exPersonalAccount__inner">
+      <div class="profile">
+        <div class="profile__inner">
+          <div class="profile__inner-content">
+            <div class="profile__inner-img">
+              <img src="../assets/img/icon-profile.svg" alt="Аватар" />
+            </div>
+            <div class="profile__inner-text">
+              <h1>Орехов Михаил Дмитриевич</h1>
+              <p>Преподаватель</p>
+            </div>
           </div>
-          <div class="profile__inner-text">
-            <h1>Орехов Михаил Дмитриевич</h1>
-            <p>Преподаватель</p>
+          <div class="profile__inner-exit">
+            <router-link to="/">Выйти</router-link>
           </div>
-        </div>
-        <div class="profile__inner-exit">
-          <a href="student-authorization.html">Выйти</a>
         </div>
       </div>
-    </div>
-    <div class="archive">
-      <div class="archive__inner">
-        <h1>Архив билетов</h1>
-        <div class="archive__inner-options">
-          <a href="#">Последние созданные билеты</a>
-          <a href="#">Избранные билеты</a>
+      <div class="archive">
+        <div class="archive__inner">
+          <h1>Архив билетов</h1>
+          <div class="archive__inner-options">
+            <a href="#">Последние созданные билеты</a>
+            <a href="#">Избранные билеты</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="detailded-information">
-      <div class="detailed-information__inner">
-        <h1>Подробная информация о пользователе</h1>
-        <div class="detailed-information__inner-content">
-          <div class="adress">
-            <div class="adress__inner">
-              <p>Адрес электронной почты</p>
-              <h2>*************@yandex.ru</h2>
-            </div>
-            <div class="adress__add">
-              <p>
-                Добавить дополнительный адрес<span><img src="../assets/img/icon-arrow.png" alt="стрелочка" /></span>
-              </p>
-            </div>
-          </div>
-          <div class="password">
-            <div class="password__inner">
-              <div class="password__inner-content">
-                <div class="password__inner-show">
-                  <p>Пароль</p>
-                  <a href="#"><img src="../assets/img/icon-closed-eye.svg" alt="Закрытый глаз" /></a>
-                </div>
-                <h2>***************</h2>
+      <div class="detailded-information">
+        <div class="detailed-information__inner">
+          <h1>Подробная информация о пользователе</h1>
+          <div class="detailed-information__inner-content">
+            <div class="adress">
+              <div class="adress__inner">
+                <p>Адрес электронной почты</p>
+                <h2>*************@yandex.ru</h2>
               </div>
-
-              <div class="password__change">
+              <div class="adress__add">
                 <p>
-                  Сменить пароль <span><img src="../assets/img/icon-arrow.png" alt="стрелочка" /></span>
+                  Добавить дополнительный адрес<span><img src="../assets/img/icon-arrow.png" alt="стрелочка" /></span>
                 </p>
               </div>
             </div>
-          </div>
-          <div class="qualification">
-            <div class="qualification__inner">
-              <p>Квалификация</p>
-              <h2>Указать...</h2>
+            <div class="password">
+              <div class="password__inner">
+                <div class="password__inner-content">
+                  <div class="password__inner-show">
+                    <p>Пароль</p>
+                    <a href="#"><img src="../assets/img/icon-closed-eye.svg" alt="Закрытый глаз" /></a>
+                  </div>
+                  <h2>***************</h2>
+                </div>
+
+                <div class="password__change">
+                  <p>
+                    Сменить пароль <span><img src="../assets/img/icon-arrow.png" alt="стрелочка" /></span>
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="faculty">
-            <div class="faculty__inner">
-              <p>Факультет</p>
-              <h2>Указать...</h2>
+            <div class="qualification">
+              <div class="qualification__inner">
+                <p>Квалификация</p>
+                <h2>Указать...</h2>
+              </div>
+            </div>
+            <div class="faculty">
+              <div class="faculty__inner">
+                <p>Факультет</p>
+                <h2>Указать...</h2>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="news">
-      <div class="news__inner">
-        <h1>Новости</h1>
-        <div class="news__inner-paragraps">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus lacinia nisi et scelerisque.Ut a
-            libero vel est sollicitudin placerat sit amet ut massa. Vestibulum vitae velit eget neque viverra sagittis
-            vel sed nibh.
-          </p>
-          <p>Vestibulum vitae velit eget neque viverra sagittis vel sed nibh.</p>
+      <div class="news">
+        <div class="news__inner">
+          <h1>Новости</h1>
+          <div class="news__inner-paragraps">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus lacinia nisi et scelerisque.Ut a
+              libero vel est sollicitudin placerat sit amet ut massa. Vestibulum vitae velit eget neque viverra sagittis
+              vel sed nibh.
+            </p>
+            <p>Vestibulum vitae velit eget neque viverra sagittis vel sed nibh.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script></script>
 
-<style>
+<style scoped>
 /*personal account-----------*/
-
+* {
+  font-family: 'Inter', sans-serif;
+}
+.personalAccount {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(217, 217, 217, 0.4);
+}
 .exPersonalAccount__inner {
+  width: 80%;
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: flex-start;
@@ -106,7 +118,7 @@
 
 .exPersonalAccount__inner p {
   font-weight: 700;
-  font-size: 24px;
+  font-size: calc(calc(1vw + 1vh) * 1.1);
   line-height: 30px;
 
   color: #3a373d;
@@ -115,11 +127,12 @@
 .exPersonalAccount__inner h1 {
   text-align: center;
   padding-bottom: 30px;
+  color: #405d91;
 }
 
 .exPersonalAccount__inner h2 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: calc(calc(1vw + 1vh) * 1.1);
   line-height: 29px;
 
   color: #405d91;
@@ -165,7 +178,7 @@
 
 .profile__inner-exit a {
   font-weight: 700;
-  font-size: 24px;
+  font-size: calc(calc(1vw + 1vh) * 1);
   line-height: 29px;
 
   color: rgba(58, 55, 61, 0.7);
@@ -193,7 +206,7 @@
 
 .detailed-information__inner-content p {
   padding-bottom: 10px;
-  font-size: 22px;
+  font-size: calc(calc(1vw + 1vh) * 1.05);
 }
 
 .adress__inner {
@@ -276,7 +289,7 @@
 
 .archive__inner-options a {
   font-weight: 700;
-  font-size: 24px;
+  font-size: calc(calc(1vw + 1vh) * 1.1);
   line-height: 29px;
   text-decoration-line: underline;
 

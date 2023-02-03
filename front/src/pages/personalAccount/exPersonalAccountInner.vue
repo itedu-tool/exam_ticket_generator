@@ -5,7 +5,7 @@
         <div class="profile__inner">
           <div class="profile__inner-content">
             <div class="profile__inner-img">
-              <img src="../assets/img/icon-profile.svg" alt="Аватар" />
+              <img src="@/assets/img/icon-profile.svg" alt="Аватар" />
             </div>
             <div class="profile__inner-text">
               <h1>Орехов Михаил Дмитриевич</h1>
@@ -38,7 +38,7 @@
               </div>
               <div class="adress__add">
                 <p>
-                  Добавить дополнительный адрес<span><img src="../assets/img/icon-arrow.png" alt="стрелочка" /></span>
+                  Добавить дополнительный адрес<span><img src="@/assets/img/icon-arrow.png" alt="стрелочка" /></span>
                 </p>
               </div>
             </div>
@@ -47,14 +47,14 @@
                 <div class="password__inner-content">
                   <div class="password__inner-show">
                     <p>Пароль</p>
-                    <a href="#"><img src="../assets/img/icon-closed-eye.svg" alt="Закрытый глаз" /></a>
+                    <a href="#"><img src="@/assets/img/icon-closed-eye.svg" alt="Закрытый глаз" /></a>
                   </div>
                   <h2>***************</h2>
                 </div>
 
                 <div class="password__change">
                   <p>
-                    Сменить пароль <span><img src="../assets/img/icon-arrow.png" alt="стрелочка" /></span>
+                    Сменить пароль <span><img src="@/assets/img/icon-arrow.png" alt="стрелочка" /></span>
                   </p>
                 </div>
               </div>

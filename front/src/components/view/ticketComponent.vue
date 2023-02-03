@@ -1,7 +1,7 @@
 <!-- Билет -->
 <template>
   <figure class="main__block__container" @click="clickOnElement">
-    <img class="main__block__image" src="../assets/tickcet.png" alt="Билет" />
+    <img class="main__block__image" src="@/assets/tickcet.png" alt="Билет" />
     <figcaption class="figcaption__image">Билет {{ number }}</figcaption>
   </figure>
 </template>

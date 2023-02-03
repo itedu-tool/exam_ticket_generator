@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import DatabaseQuestions from './databaseQuestions.vue';
+import DatabaseQuestions from '../../components/create/questions/databaseQuestions.vue';
 export default {
   name: 'secondCreatingTemplate',
   components: { DatabaseQuestions },

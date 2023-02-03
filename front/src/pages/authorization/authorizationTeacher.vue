@@ -4,9 +4,9 @@
       <h2 class="authorization__rectangle__title">Авторизация</h2>
       <div class="choice">
         <router-link to="/">
-          <img src="../assets/image_6.png" alt="" />
+          <img src="@/assets/image_6.png" alt="" />
         </router-link>
-        <a href="#" class="info__logo"><img src="../assets/student.png" alt="" /></a>
+        <a href="#" class="info__logo"><img src="@/assets/student.png" alt="" /></a>
       </div>
       <form action="" class="form">
         <input name="name" class="form__information" placeholder="E-mail" type="email" id="email" />

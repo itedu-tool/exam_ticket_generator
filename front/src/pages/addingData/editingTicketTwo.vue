@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import InformAboutTicket from '@/components/informAboutTicket.vue';
+import InformAboutTicket from '@/components/create/informAboutTicket.vue';
 
 export default {
   name: 'editingTicketTwo',

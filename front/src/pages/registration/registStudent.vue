@@ -19,29 +19,28 @@
       </form>-->
       <div class="choice">
         <div class="student__block">
-          <router-link to="/registrationStudent" class="info__logo"
-            ><img src="../assets/image_6.png" alt=""
-          /></router-link>
+          <a href="#" class="info__logo"><img src="@/assets/info_logo.png" alt="" /></a>
           <form action="" class="form">
-            <input type="text" placeholder="Факультет" class="information__input" disabled />
-            <input type="text" placeholder="Группа" class="information__input" disabled />
-            <input type="text" placeholder="№ зачётной книжки" class="information__input" disabled />
+            <input type="text" placeholder="Факультет" class="information__input active" />
+            <input type="text" placeholder="Группа" class="information__input active" />
+            <input type="text" placeholder="№ зачётной книжки" class="information__input active" />
           </form>
         </div>
         <div class="teacher__block">
-          <a href="Regist_Teacher.vue" class="info__logo"><img src="../assets/student.png" alt="" /></a>
+          <router-link to="/registrationTeacher" class="info__logo"
+            ><img src="@/assets/info_logo2.png" alt=""
+          /></router-link>
           <form action="" class="form">
-            <input type="text" placeholder="ФИО" class="information__input active" />
-            <input type="text" placeholder="E-mail" class="information__input active" />
-            <input type="password" placeholder="Придумайте пароль" class="information__input active" />
-            <input type="password" placeholder="Повторите пароль" class="information__input active" />
+            <input type="text" placeholder="ФИО" class="information__input" disabled />
+            <input type="text" placeholder="E-mail" class="information__input" disabled />
+            <input type="text" placeholder="Придумайте пароль" class="information__input" disabled />
+            <input type="text" placeholder="Повторите пароль" class="information__input" disabled />
           </form>
         </div>
       </div>
       <router-link :to="{ name: 'addingData' }">
         <button class="button">Зарегистрироваться</button>
       </router-link>
-
       <div class="autorization">
         <router-link to="/">Уже есть аккаунт? Войти</router-link>
       </div>

@@ -1,22 +1,22 @@
 //импорт файлов добавления данных
 import { createRouter, createWebHistory } from 'vue-router';
-import addingData from '../components/addingData.vue';
-import viewTicket from '../components/viewTicket.vue';
-import ticketExample from '../components/ticketExample.vue';
-import firstCreatingTemplate from '../components/firstCreatingTemplate.vue';
-import secondCreatingTemplate from '../components/secondCreatingTemplate.vue';
-import editingTicket from '../components/editingTicketOne.vue';
-import templateEditingTwo from '../components/editingTicketTwo.vue';
-import templateEditingThree from '../components/editingTicketThree.vue';
-import generationTicket from '../components/ticketsGenerationOne.vue';
-import generationTicketTwo from '../components/ticketsGenerationTwo.vue';
+import addingData from '../pages/addingData/addingData.vue';
+import viewTicket from '../pages/addingData/viewTicket.vue';
+import ticketExample from '../pages/addingData/ticketExample.vue';
+import firstCreatingTemplate from '../pages/addingData/firstCreatingTemplate.vue';
+import secondCreatingTemplate from '../pages/addingData/secondCreatingTemplate.vue';
+import editingTicket from '../pages/addingData/editingTicketOne.vue';
+import templateEditingTwo from '../pages/addingData/editingTicketTwo.vue';
+import templateEditingThree from '../pages/addingData/editingTicketThree.vue';
+import generationTicket from '../pages/addingData/ticketsGenerationOne.vue';
+import generationTicketTwo from '../pages/addingData/ticketsGenerationTwo.vue';
 //импорт файлов авторизации
-import authorizationTeacher from '../components/authorTeacher.vue';
-import authorizationStudent from '../components/authorizationStudent.vue';
-import registrationStudent from '../components/registStudent.vue';
-import registrationTeacher from '../components/registTeacher.vue';
+import authorizationTeacher from '../pages/authorization/authorizationTeacher.vue';
+import authorizationStudent from '../pages/authorization/authorizationStudent.vue';
+import registrationStudent from '../pages/registration/registStudent.vue';
+import registrationTeacher from '../pages/registration/registTeacher.vue';
 //импорт файлов личного кабинета
-import exPersonalAccount from '../components/exPersonalAccountInner.vue';
+import exPersonalAccount from '../pages/personalAccount/exPersonalAccountInner.vue';
 
 const routes = [
   //роутеры добавления данных

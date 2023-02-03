@@ -3,9 +3,9 @@
     <div class="authorization__rectangle">
       <h2 class="authorization__rectangle__title">Авторизация</h2>
       <div class="choice">
-        <a><img class="choice__img" src="../assets/info_logo.png" alt="" /></a>
+        <a><img class="choice__img" src="@/assets/info_logo.png" alt="" /></a>
         <router-link to="/authorizationTeacher">
-          <img class="choice__img" src="../assets/info_logo2.png" alt="" />
+          <img class="choice__img" src="@/assets/info_logo2.png" alt="" />
         </router-link>
       </div>
       <form action="" class="form">

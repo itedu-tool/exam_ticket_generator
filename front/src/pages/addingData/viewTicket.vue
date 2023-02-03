@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import TicketsList from './ticketsList.vue';
+import TicketsList from '../../components/view/ticketsList.vue';
 export default {
   name: 'viewTicket',
   components: { TicketsList },

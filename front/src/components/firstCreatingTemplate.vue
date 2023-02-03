@@ -4,11 +4,6 @@
     <div class="flex">
       <h1 class="creating__template">Создание шаблона 1/2</h1>
 
-      <div class="ticket__name">
-        <h1 class="ticket__name__text">Название билета:</h1>
-        <input class="ticket__name__input" type="text" />
-      </div>
-
       <InformAboutTicket />
 
       <div class="image">

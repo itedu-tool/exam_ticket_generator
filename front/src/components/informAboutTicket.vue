@@ -4,7 +4,6 @@
     <h1 class="ticket__name__text">Название билета:</h1>
     <input class="ticket__name__input" type="text" v-model="ticketName" />
   </div>
-
   <div class="grid__container">
     <InputFields msg="Цикловая коммисия" @dataTransmission="getStorageData" />
     <InputFields msg="Название предмета" @dataTransmission="getStorageData" />

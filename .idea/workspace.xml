@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5d1b43c-ce92-4735-b1b2-b6d46d39e70d" name="Changes" comment="fixing bugs and errors when merging" />
+    <list default="true" id="e5d1b43c-ce92-4735-b1b2-b6d46d39e70d" name="Changes" comment="fixing bugs and errors when merging">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +89,7 @@
       <workItem from="1668450585469" duration="1379000" />
       <workItem from="1670402250838" duration="1217000" />
       <workItem from="1670479719155" duration="1035000" />
-      <workItem from="1670947410353" duration="313000" />
+      <workItem from="1670947410353" duration="3293000" />
     </task>
     <task id="LOCAL-00001" summary="add common footer and header">
       <created>1668366656250</created>

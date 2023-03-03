@@ -13,13 +13,14 @@
         <input name="name" class="form__information" placeholder="Группа" type="text" id="group" />
         <input name="name" class="form__information" placeholder="№ зачётной книжки" type="text" id="books" />
 
-        <router-link to="./addingData">
-          <button class="button">Войти</button>
-        </router-link>
+        <!--<router-link to="./addingData">-->
+        <button class="button" type="button" @click="notification">Войти</button>
+        <!--</router-link>-->
 
         <div class="registration">
           <router-link to="/registrationStudent">Зарегистрироваться</router-link>
         </div>
+        <div class="notification"></div>
       </form>
     </div>
   </section>
@@ -28,6 +29,29 @@
 <script>
 export default {
   name: 'autorizationStudent',
+  data() {
+    return {
+      faculty: 'ФСПО',
+      group: 'ИСП-205',
+      books: '1111',
+    };
+  },
+  methods: {
+    notification() {
+      let faculty = document.getElementById('faculty');
+      let group = document.getElementById('group');
+      let books = document.getElementById('books');
+      if ((faculty.value && group.value && books.value) != 0) {
+        if (faculty.value == this.faculty && this.value == this.group && books.value == this.books) {
+          document.querySelector('.notification').innerHTML = 'Вы авторизовались';
+        } else {
+          document.querySelector('.notification').innerHTML = 'Вы не авторизовались';
+        }
+      } else {
+        document.querySelector('.notification').innerHTML = 'Вы не авторизовались';
+      }
+    },
+  },
 };
 </script>
 

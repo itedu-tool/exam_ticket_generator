@@ -1,15 +1,15 @@
 //импорт файлов добавления данных
 import { createRouter, createWebHistory } from 'vue-router';
 import addingData from '../pages/addingData/addingData.vue';
-import viewTicket from '../pages/addingData/viewTicket.vue';
-import ticketExample from '../pages/addingData/ticketExample.vue';
-import firstCreatingTemplate from '../pages/addingData/firstCreatingTemplate.vue';
-import secondCreatingTemplate from '../pages/addingData/secondCreatingTemplate.vue';
-import editingTicket from '../pages/addingData/editingTicketOne.vue';
-import templateEditingTwo from '../pages/addingData/editingTicketTwo.vue';
-import templateEditingThree from '../pages/addingData/editingTicketThree.vue';
-import generationTicket from '../pages/addingData/ticketsGenerationOne.vue';
-import generationTicketTwo from '../pages/addingData/ticketsGenerationTwo.vue';
+import viewTicket from '../pages/views/viewTicket.vue';
+import ticketExample from '../pages/views/ticketExample.vue';
+import firstCreatingTemplate from '../pages/creating/firstCreatingTemplate.vue';
+import secondCreatingTemplate from '../pages/creating/secondCreatingTemplate.vue';
+import editingTicket from '../pages/editing/editingTicketOne.vue';
+import templateEditingTwo from '../pages/editing/editingTicketTwo.vue';
+import templateEditingThree from '../pages/editing/editingTicketThree.vue';
+import generationTicket from '../pages/generation/ticketsGenerationOne.vue';
+import generationTicketTwo from '../pages/generation/ticketsGenerationTwo.vue';
 //импорт файлов авторизации
 import authorizationTeacher from '../pages/authorization/authorizationTeacher.vue';
 import authorizationStudent from '../pages/authorization/authorizationStudent.vue';

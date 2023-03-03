@@ -25,6 +25,14 @@ body {
   justify-content: center;
 }
 
+.main__block__p{
+  font-size: calc(calc(1vw + 1vh) * 1);
+  color: rgba(64, 93, 145, 1);
+  font-weight: bold;
+  text-align: center;
+  height: 50%;
+  margin-top: 25%;
+}
 /* tickets control */
 
 .tickets__control {

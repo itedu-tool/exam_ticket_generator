@@ -1,6 +1,6 @@
 <template>
   <!-- Генерация билета. Вторая страница.-->
-  <div class="flex-container">
+  <div class="tickets__generation__two">
     <div class="flex-size">
       <h1 class="title">Генерация билетов</h1>
       <router-link :to="{ name: 'generation' }" class="back__box">

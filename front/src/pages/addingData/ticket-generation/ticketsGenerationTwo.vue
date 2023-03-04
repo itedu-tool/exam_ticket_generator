@@ -3,7 +3,7 @@
   <div class="tickets__generation__two">
     <div class="flex-size">
       <h1 class="title">Генерация билетов</h1>
-      <router-link :to="{ name: 'generation' }" class="back__box">
+      <router-link :to="{ name: 'ticket-generation' }" class="back__box">
         <div class="back__img"></div>
         <h1 class="back__text">Назад</h1>
       </router-link>
@@ -25,4 +25,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/ticketsGenerationTwo.css"></style>
+<style scoped src="@/css/addingData/ticket-generation/ticketsGenerationTwo.css"></style>

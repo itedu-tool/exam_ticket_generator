@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import TicketsList from '../../components/view/ticketsList.vue';
+import TicketsList from '../../../components/view/ticketsList.vue';
 export default {
   name: 'editingTicketOne',
   components: { TicketsList },
 };
 </script>
 
-<style scoped src="@/css/editingTicketOne.css"></style>
+<style scoped src="@/css/addingData/ticket-edit/editingTicketOne.css"></style>

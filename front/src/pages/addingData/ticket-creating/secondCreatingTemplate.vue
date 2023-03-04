@@ -10,7 +10,7 @@
         <div class="box__image">
           <button class="button">Создать шаблон</button>
           <div class="image">
-            <router-link :to="{ name: 'creating' }" class="back__image"></router-link>
+            <router-link :to="{ name: 'ticket-creating' }" class="back__image"></router-link>
             <a class="forward__image"></a>
           </div>
         </div>
@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import DatabaseQuestions from '../../components/create/questions/databaseQuestions.vue';
+import DatabaseQuestions from '../../../components/create/questions/databaseQuestions.vue';
 export default {
   name: 'secondCreatingTemplate',
   components: { DatabaseQuestions },
 };
 </script>
 
-<style scoped src="@/css/secondCreatingTemplate.css"></style>
+<style scoped src="@/css/addingData/ticket-create/secondCreatingTemplate.css"></style>

@@ -1,6 +1,6 @@
 <template>
   <!-- Поле ввода информации -->
-  <div class="container">
+  <div class="container-input">
     <label class="input__title" :for="parametrs.id">{{ msg }}</label>
     <input class="input" type="text" :id="parametrs.id" v-model="parametrs.getInput" @input="dataTransmission" />
   </div>

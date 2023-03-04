@@ -38,4 +38,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/ticketsGenerationOne.css"></style>
+<style scoped src="@/css/addingData/ticket-generation/ticketsGenerationOne.css"></style>

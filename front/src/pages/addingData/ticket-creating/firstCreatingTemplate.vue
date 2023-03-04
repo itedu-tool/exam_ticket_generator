@@ -16,11 +16,11 @@
 </template>
 
 <script>
-import InformAboutTicket from '../../components/create/informAboutTicket.vue';
+import InformAboutTicket from '../../../components/create/informAboutTicket.vue';
 export default {
   name: 'firstCreatingTemplate',
   components: { InformAboutTicket },
 };
 </script>
 
-<style scoped src="@/css/firstCreatingTemplate.css"></style>
+<style scoped src="@/css/addingData/ticket-create/firstCreatingTemplate.css"></style>

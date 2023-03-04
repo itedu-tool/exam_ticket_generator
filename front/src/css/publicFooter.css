@@ -1,11 +1,10 @@
-*{
-  font-family: 'Inter', sans-serif;
-}
+
 .footer {
     display: flex;
     background-color: rgba(222, 226, 234, 1);
+  padding: 25px;
   }
-  
+
   .lists {
     display: flex;
     margin-left: calc(1vw * 6);
@@ -16,13 +15,13 @@
     margin: 0;
     margin-bottom: calc(calc(1vw + 1vh) * 0.5);
   }
-  
+
   .lists__link {
     text-decoration: none;
     color: rgba(58, 55, 61, 1);
     margin: 10px;
   }
-  
+
   .about {
     margin-right: calc(calc(1vw + 1vh) * 4);
   }
@@ -50,7 +49,8 @@
   }
   h1 + .lists__link {
     margin-bottom: calc(calc(1vw + 1vh) * 0.5);
-  }  
+  }
   h1.authors__link > a {
     color: rgba(58, 55, 61, 1);
+    text-decoration: underline;
   }

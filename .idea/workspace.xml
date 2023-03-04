@@ -4,8 +4,64 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5d1b43c-ce92-4735-b1b2-b6d46d39e70d" name="Changes" comment="fixing bugs and errors when merging">
+    <list default="true" id="4f742299-7c2b-4b1e-a5c5-f8a33f3f8b0b" name="Changes" comment="fixing bugs and errors when merging">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/img/icon-pupil-active.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/img/icon-pupil-disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/img/icon-teacher-active.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/icon-teacher.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/img/icon-teacher-disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/layouts/_global.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/layouts/_global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/layouts/_reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/layouts/_reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/student.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/create/informAboutTicket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/create/informAboutTicket.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/create/inputFields.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/create/inputFields.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/create/questions/addUlElement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/create/questions/addUlElement.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/create/questions/databaseQuestions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/create/questions/databaseQuestions.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/create/questions/deleteUlElement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/create/questions/deleteUlElement.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/create/questions/typeOfQuestions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/create/questions/typeOfQuestions.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/publicFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/exFooter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/publicHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/exHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/publicMain.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/view/ticketComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/view/ticketComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/view/ticketsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/view/ticketsList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/editingTicketOne.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/addingData/ticket-edit/editingTicketOne.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/editingTicketThree.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/addingData/ticket-edit/editingTicketThree.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/editingTicketTwo.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/addingData/ticket-edit/editingTicketTwo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/firstCreatingTemplate.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/addingData/ticket-create/firstCreatingTemplate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/informAboutTicket.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/informAboutTicket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/inputFields.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/inputFields.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/publicFooter.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/publicFooter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/publicHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/publicHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/publicMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/addingData/addingData.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/secondCreatingTemplate.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/addingData/ticket-create/secondCreatingTemplate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/ticketExample.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/addingData/ticket-view/ticketExample.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/ticketsGenerationOne.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/addingData/ticket-generation/ticketsGenerationOne.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/ticketsGenerationTwo.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/addingData/ticket-generation/ticketsGenerationTwo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/viewTicket.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/addingData/ticket-view/viewTicket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/addingData/addingData.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/addingData.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/authorization/authorizationStudent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/authorization/authorizationTeacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/authorization/authorizationTeacher.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/creating/firstCreatingTemplate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-creating/firstCreatingTemplate.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/creating/secondCreatingTemplate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-creating/secondCreatingTemplate.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/editing/editingTicketOne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-redact/editingTicketOne.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/editing/editingTicketThree.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-redact/editingTicketThree.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/editing/editingTicketTwo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-redact/editingTicketTwo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/generation/ticketsGenerationOne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-generation/ticketsGenerationOne.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/generation/ticketsGenerationTwo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-generation/ticketsGenerationTwo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/personalAccount/exPersonalAccountInner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/personalAccount/PersonalAccount.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/registration/registStudent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/registration/registTeacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/registration/registTeacher.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/views/ticketExample.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-view/ticketExample.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/views/viewTicket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-view/viewTicket.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,32 +79,39 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2HVKeixheesct0jxgQh6DFq71yB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Programming/exam_ticket_generator_2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/programming/ticket-generator-mern&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\programming\repos\exam_ticket_generator\front\src\assets\img" />
+      <recent name="C:\programming\exam-ticket\front\src\css\addingData\ticket-view" />
+      <recent name="C:\programming\exam-ticket\front\src\css\addingData\ticket-generation" />
+      <recent name="C:\programming\exam-ticket\front\src\css\addingData\ticket-create" />
+      <recent name="C:\programming\exam-ticket\front\src\css\addingData\ticket-edit" />
+      <recent name="C:\programming\exam-ticket\front\src\css\header" />
     </key>
   </component>
   <component name="RunManager" selected="npm.serve">
@@ -80,7 +143,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e5d1b43c-ce92-4735-b1b2-b6d46d39e70d" name="Changes" comment="Update SonarLint" />
+      <changelist id="4f742299-7c2b-4b1e-a5c5-f8a33f3f8b0b" name="Changes" comment="fixing bugs and errors when merging" />
       <created>1668364913312</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -90,6 +153,7 @@
       <workItem from="1670402250838" duration="1217000" />
       <workItem from="1670479719155" duration="1035000" />
       <workItem from="1670947410353" duration="3293000" />
+      <workItem from="1677942056303" duration="391000" />
     </task>
     <task id="LOCAL-00001" summary="add common footer and header">
       <created>1668366656250</created>

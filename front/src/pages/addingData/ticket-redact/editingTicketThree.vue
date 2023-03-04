@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import DatabaseQuestions from '../../components/create/questions/databaseQuestions.vue';
+import DatabaseQuestions from '../../../components/create/questions/databaseQuestions.vue';
 export default {
   name: 'editingTicketThree',
   components: { DatabaseQuestions },
 };
 </script>
 
-<style scoped src="@/css/editingTicketThree.css"></style>
+<style scoped src="@/css/addingData/ticket-edit/editingTicketThree.css"></style>

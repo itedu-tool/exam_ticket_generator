@@ -42,4 +42,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/ticketExample.css"></style>
+<style scoped src="@/css/addingData/ticket-view/ticketExample.css"></style>

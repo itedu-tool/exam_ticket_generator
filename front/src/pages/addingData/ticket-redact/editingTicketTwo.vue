@@ -7,7 +7,7 @@
       <InformAboutTicket />
 
       <div class="image">
-        <router-link :to="{ name: 'editing' }" class="back__image"></router-link>
+        <router-link :to="{ name: 'ticket-edit' }" class="back__image"></router-link>
         <router-link :to="{ name: 'templateEditingThree' }" class="forward__image"></router-link>
       </div>
     </div>
@@ -24,4 +24,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/editingTicketTwo.css"></style>
+<style scoped src="@/css/addingData/ticket-edit/editingTicketTwo.css"></style>

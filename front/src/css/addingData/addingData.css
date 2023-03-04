@@ -1,28 +1,19 @@
-* {
-  font-family: 'Inter', sans-serif;
-}
-
-body {
-  margin: 0;
-  box-sizing: border-box;
-}
 
 /* main */
-.main {
-  background-color: rgba(245, 245, 245, 1);
+.adding-data {
   height: calc(calc(1vw + 1vh) * 30);
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .main__block {
-  width: calc(calc(1vw + 1vh) * 35);
-  height: calc(calc(1vw + 1vh) * 22.5);
+
   background-color: rgba(255, 255, 255, 1);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  padding: 35px;
 }
 
 .main__block__p{
@@ -30,18 +21,20 @@ body {
   color: rgba(64, 93, 145, 1);
   font-weight: bold;
   text-align: center;
-  height: 50%;
-  margin-top: 25%;
+  line-height: normal;
+  margin: 25% 0;
+
 }
 /* tickets control */
 
 .tickets__control {
-  width: calc(calc(1vw + 1vh) * 11);
+  padding: 15px;
   height: calc(calc(1vw + 1vh) * 22.5);
-
+  margin-right: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   background-color: rgba(255, 255, 255, 1);
 }
@@ -51,6 +44,7 @@ body {
   font-size: calc(calc(1vw + 1vh) * 1.5);
   text-align: center;
   color: rgba(64, 93, 145, 1);
+  margin-bottom: 25px;
 }
 
 .button__box {
@@ -74,9 +68,8 @@ body {
   margin-bottom: calc(1vw + 1vh);
 }
 
-
 @media (max-width: 620px) {
-  .main {
+  .adding-data {
     height: calc(calc(1vw + 1vh) * 40);
 
     flex-direction: column;

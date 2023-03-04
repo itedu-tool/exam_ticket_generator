@@ -1,33 +1,25 @@
 <template>
   <!-- Шапка.Статичная.Не изменять -->
-  <header>
-    <publicHeader></publicHeader>
-  </header>
+  <publicHeader></publicHeader>
 
-  <!-- Основной контент.Вставить свою компоненту -->
-  <main>
-    <publicMain></publicMain>
-  </main>
+  <div class="wrapper">
+    <!-- Основной контент.Вставить свою компоненту -->
+    <main class="main">
+      <div class="container">
+        <router-view />
+      </div>
+    </main>
 
-  <!-- Подвал.Статичный.Не изменять -->
-  <footer>
+    <!-- Подвал.Статичный.Не изменять -->
     <publicFooter></publicFooter>
-  </footer>
+  </div>
 </template>
 <script>
-import publicHeader from './components/publicHeader.vue';
-import publicMain from './components/publicMain.vue';
-import publicFooter from './components/publicFooter.vue';
+import publicHeader from './components/exHeader.vue';
+import publicFooter from './components/exFooter.vue';
 
 export default {
   name: 'App',
-  components: { publicFooter, publicMain, publicHeader },
+  components: { publicFooter, publicHeader },
 };
 </script>
-
-<style>
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-</style>

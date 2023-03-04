@@ -11,7 +11,7 @@
       <div class="title__text">
         <h1 class="title">Генератор экзаменационных билетов</h1>
         <p class="text">
-          Программное средство создания<br />экзаменационных билетов
+          Программное средство создания экзаменационных билетов
           <a href="https://ru.vuejs.org/" target="_blank" class="vue">Vue</a>.js
         </p>
       </div>

@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import TicketsList from '../../components/view/ticketsList.vue';
+import TicketsList from '../../../components/view/ticketsList.vue';
 export default {
   name: 'viewTicket',
   components: { TicketsList },
 };
 </script>
 
-<style scoped src="@/css/viewTicket.css"></style>
+<style scoped src="@/css/addingData/ticket-view/viewTicket.css"></style>

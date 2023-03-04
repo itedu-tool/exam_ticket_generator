@@ -95,30 +95,18 @@
 
 <style scoped>
 /*personal account-----------*/
-* {
-  font-family: 'Inter', sans-serif;
-}
-.personalAccount {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: rgba(217, 217, 217, 0.4);
-}
 .exPersonalAccount__inner {
-  width: 80%;
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: flex-start;
   justify-content: space-between;
   gap: 50px 50px;
   align-content: space-evenly;
-  margin: 5vh 0;
 }
 
 .exPersonalAccount__inner p {
   font-weight: 700;
-  font-size: calc(calc(1vw + 1vh) * 1.1);
+  font-size: 24px;
   line-height: 30px;
 
   color: #3a373d;
@@ -127,12 +115,11 @@
 .exPersonalAccount__inner h1 {
   text-align: center;
   padding-bottom: 30px;
-  color: #405d91;
 }
 
 .exPersonalAccount__inner h2 {
   font-weight: 700;
-  font-size: calc(calc(1vw + 1vh) * 1.1);
+  font-size: 24px;
   line-height: 29px;
 
   color: #405d91;
@@ -149,7 +136,7 @@
 
   width: auto;
   background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   padding: 30px;
 }
@@ -174,14 +161,13 @@
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
-}
 
-.profile__inner-exit a {
   font-weight: 700;
-  font-size: calc(calc(1vw + 1vh) * 1);
+  font-size: 24px;
   line-height: 29px;
 
   color: rgba(58, 55, 61, 0.7);
+  cursor: pointer;
 }
 
 /* Детальная информация  *******************/
@@ -206,7 +192,7 @@
 
 .detailed-information__inner-content p {
   padding-bottom: 10px;
-  font-size: calc(calc(1vw + 1vh) * 1.05);
+  font-size: 22px;
 }
 
 .adress__inner {
@@ -259,7 +245,8 @@
 
 .news__inner {
   width: auto;
-
+  max-height: 350px;
+  overflow-y: scroll;
   background: #ffffff;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -289,7 +276,7 @@
 
 .archive__inner-options a {
   font-weight: 700;
-  font-size: calc(calc(1vw + 1vh) * 1.1);
+  font-size: 24px;
   line-height: 29px;
   text-decoration-line: underline;
 

@@ -1,24 +1,42 @@
+//импорт файлов авторизации
+import authorizationTeacher from '../pages/authorization/authorizationTeacher.vue';
+import registrationTeacher from '../pages/registration/registTeacher.vue';
+
+//импорт файлов личного кабинета
+import exPersonalAccount from '../pages/personalAccount/PersonalAccount.vue';
+
 //импорт файлов добавления данных
 import { createRouter, createWebHistory } from 'vue-router';
 import addingData from '../pages/addingData/addingData.vue';
-import viewTicket from '../pages/views/viewTicket.vue';
-import ticketExample from '../pages/views/ticketExample.vue';
-import firstCreatingTemplate from '../pages/creating/firstCreatingTemplate.vue';
-import secondCreatingTemplate from '../pages/creating/secondCreatingTemplate.vue';
-import editingTicket from '../pages/editing/editingTicketOne.vue';
-import templateEditingTwo from '../pages/editing/editingTicketTwo.vue';
-import templateEditingThree from '../pages/editing/editingTicketThree.vue';
-import generationTicket from '../pages/generation/ticketsGenerationOne.vue';
-import generationTicketTwo from '../pages/generation/ticketsGenerationTwo.vue';
-//импорт файлов авторизации
-import authorizationTeacher from '../pages/authorization/authorizationTeacher.vue';
-import authorizationStudent from '../pages/authorization/authorizationStudent.vue';
-import registrationStudent from '../pages/registration/registStudent.vue';
-import registrationTeacher from '../pages/registration/registTeacher.vue';
-//импорт файлов личного кабинета
-import exPersonalAccount from '../pages/personalAccount/exPersonalAccountInner.vue';
+import viewTicket from '../pages/addingData/ticket-view/viewTicket.vue';
+import ticketExample from '../pages/addingData/ticket-view/ticketExample.vue';
+import firstCreatingTemplate from '../pages/addingData/ticket-creating/firstCreatingTemplate.vue';
+import secondCreatingTemplate from '../pages/addingData/ticket-creating/secondCreatingTemplate.vue';
+import editingTicket from '../pages/addingData/ticket-redact/editingTicketOne.vue';
+import templateEditingTwo from '../pages/addingData/ticket-redact/editingTicketTwo.vue';
+import templateEditingThree from '../pages/addingData/ticket-redact/editingTicketThree.vue';
+import generationTicket from '../pages/addingData/ticket-generation/ticketsGenerationOne.vue';
+import generationTicketTwo from '../pages/addingData/ticket-generation/ticketsGenerationTwo.vue';
 
 const routes = [
+  //роутеры авторизации
+  {
+    path: '/',
+    name: 'authorizationTeacher',
+    component: authorizationTeacher,
+  },
+  {
+    path: '/registrationTeacher',
+    name: 'registrationTeacher',
+    component: registrationTeacher,
+  },
+  //роутеры личного кабинета
+  {
+    path: '/personalAccount',
+    name: 'personalAccount',
+    component: exPersonalAccount,
+  },
+
   //роутеры добавления данных
   {
     path: '/addingData',
@@ -36,69 +54,41 @@ const routes = [
         component: ticketExample,
       },
       {
-        path: '/addingData/creating',
-        name: 'creating',
+        path: '/addingData/ticket-creating',
+        name: 'ticket-creating',
         component: firstCreatingTemplate,
       },
       {
-        path: '/addingData/creating/secondCreating',
+        path: '/addingData/ticket-creating/secondCreating',
         name: 'secondCreating',
         component: secondCreatingTemplate,
       },
       {
-        path: '/addingData/editing',
-        name: 'editing',
+        path: '/addingData/ticket-edit',
+        name: 'ticket-edit',
         component: editingTicket,
       },
       {
-        path: '/addingData/editing/templateEditingTwo',
+        path: '/addingData/ticket-edit/templateEditingTwo',
         name: 'templateEditingTwo',
         component: templateEditingTwo,
       },
       {
-        path: '/addingData/editing/templateEditingThree',
+        path: '/addingData/ticket-edit/templateEditingThree',
         name: 'templateEditingThree',
         component: templateEditingThree,
       },
       {
-        path: '/addingData/generation',
-        name: 'generation',
+        path: '/addingData/ticket-generation',
+        name: 'ticket-generation',
         component: generationTicket,
       },
       {
-        path: '/addingData/generation/successfully',
+        path: '/addingData/ticket-generation/successfully',
         name: 'successfully',
         component: generationTicketTwo,
       },
     ],
-  },
-
-  //роутеры авторизации
-  {
-    path: '/',
-    name: 'authorizationStudent',
-    component: authorizationStudent,
-  },
-  {
-    path: '/authorizationTeacher',
-    name: 'authorizationTeacher',
-    component: authorizationTeacher,
-  },
-  {
-    path: '/registrationStudent',
-    name: 'registrationStudent',
-    component: registrationStudent,
-  },
-  {
-    path: '/registrationTeacher',
-    name: 'registrationTeacher',
-    component: registrationTeacher,
-  },
-  //роутеры личного кабинета
-  {
-    path: '/personalAccount',
-    name: 'personalAccount',
-    component: exPersonalAccount,
   },
 ];
 

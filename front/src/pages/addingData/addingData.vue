@@ -1,13 +1,14 @@
 <template>
-  <!-- Основной контент страницы. Изменяемый для разных страниц. -->
-  <main class="main">
+  <div class="adding-data">
     <div class="tickets__control">
       <h1 class="control__title">Управление билетами</h1>
       <div class="button__box">
         <router-link :to="{ name: 'viewTicket' }" class="router-link" @click="allFunc()">Посмотреть</router-link>
-        <router-link :to="{ name: 'creating' }" class="router-link" @click="allFunc()">Создать</router-link>
-        <router-link :to="{ name: 'editing' }" class="router-link" @click="allFunc()">Редактировать</router-link>
-        <router-link :to="{ name: 'generation' }" class="router-link" @click="mainSizeMin()">Сгенерировать</router-link>
+        <router-link :to="{ name: 'ticket-creating' }" class="router-link" @click="allFunc()">Создать</router-link>
+        <router-link :to="{ name: 'ticket-edit' }" class="router-link" @click="allFunc()">Редактировать</router-link>
+        <router-link :to="{ name: 'ticket-generation' }" class="router-link" @click="mainSizeMin()"
+          >Сгенерировать
+        </router-link>
       </div>
     </div>
 
@@ -15,7 +16,7 @@
       <p class="main__block__p">Нажмите на интересующую вас категорию в списке управления билетами</p>
       <router-view />
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -50,4 +51,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/css/publicMain.css"></style>
+<style scoped src="@/css/addingData/addingData.css"></style>

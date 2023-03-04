@@ -13,15 +13,22 @@
     </div>
 
     <div class="main__block">
-      <p class="main__block__p">Нажмите на интересующую вас категорию в списке управления билетами</p>
-      <router-view />
+      <appSlot>
+        <template v-slot:default>
+          <view-ticket></view-ticket>
+        </template>
+      </appSlot>
     </div>
   </div>
 </template>
 
 <script>
+import appSlot from '@/pages/slots/slot.vue';
+import viewTicket from './ticket-view/viewTicket.vue';
 export default {
   name: 'addingData',
+
+  components: { appSlot, viewTicket },
 
   methods: {
     allFunc: function () {

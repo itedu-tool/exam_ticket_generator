@@ -9,7 +9,6 @@
     <div class="main__router-link__box">
       <router-link :to="{ name: 'ticketExample' }" class="main__block__router-link">Просмотреть</router-link>
     </div>
-    <router-view />
   </div>
 </template>
 

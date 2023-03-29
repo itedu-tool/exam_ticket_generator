@@ -1,7 +1,9 @@
 * {
     font-family: 'Inter', sans-serif;
   }
-
+  button{
+    background-color: #fff;
+  }
   .second__creating__template {
     width: 100%;
 

@@ -8,19 +8,24 @@
 
     <div class="main__button__box">
       <div class="back__image"></div>
-      <router-link :to="{ name: 'templateEditingTwo' }">
+      <button @click="sendData">
         <div class="forward__image"></div>
-      </router-link>
+      </button>
     </div>
   </div>
-  <router-view />
 </template>
 
 <script>
+import editingTicketTwo from '../ticket-redact/editingTicketTwo.vue';
 import TicketsList from '../../../components/view/ticketsList.vue';
 export default {
   name: 'editingTicketOne',
   components: { TicketsList },
+  methods: {
+    sendData() {
+      this.$emit('sendData', editingTicketTwo);
+    },
+  },
 };
 </script>
 

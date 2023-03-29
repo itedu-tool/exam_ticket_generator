@@ -8,18 +8,23 @@
 
       <div class="image">
         <a class="back__image"></a>
-        <router-link :to="{ name: 'secondCreating' }" class="forward__image"></router-link>
+        <button class="forward__image" @click="sendData"></button>
       </div>
     </div>
-    <router-view />
   </div>
 </template>
 
 <script>
+import secondCreatingTemplate from './secondCreatingTemplate.vue';
 import InformAboutTicket from '../../../components/create/informAboutTicket.vue';
 export default {
   name: 'firstCreatingTemplate',
   components: { InformAboutTicket },
+  methods: {
+    sendData() {
+      this.$emit('sendData', secondCreatingTemplate);
+    },
+  },
 };
 </script>
 

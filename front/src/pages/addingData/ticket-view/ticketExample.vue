@@ -2,10 +2,10 @@
   <!-- Просмотр билета. Вторая страница с примером готового билета. -->
   <div class="ticket__example">
     <div class="title">
-      <router-link class="back" :to="{ name: 'viewTicket' }">
+      <button class="back" @click="sendData">
         <div class="back__image"></div>
         <p class="back__text">Назад</p>
-      </router-link>
+      </button>
       <p class="main__block__title">Просмотр билета</p>
     </div>
 
@@ -32,13 +32,18 @@
         </div>
       </div>
     </div>
-    <router-view />
   </div>
 </template>
 
 <script>
+import viewTicket from './viewTicket.vue';
 export default {
   name: 'ticketExample',
+  methods: {
+    sendData() {
+      this.$emit('sendData', viewTicket);
+    },
+  },
 };
 </script>
 

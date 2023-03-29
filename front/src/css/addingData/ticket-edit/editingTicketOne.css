@@ -1,6 +1,9 @@
 * {
   font-family: 'Inter', sans-serif;
 }
+button{
+  background-color: #fff;
+}
 .editing__ticket__one {
     width: 90%;
     height: 90%;

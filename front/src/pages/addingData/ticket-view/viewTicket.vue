@@ -7,16 +7,22 @@
     <TicketsList />
 
     <div class="main__router-link__box">
-      <router-link :to="{ name: 'ticketExample' }" class="main__block__router-link">Просмотреть</router-link>
+      <button class="main__block__router-link" @click="sendData">Просмотреть</button>
     </div>
   </div>
 </template>
 
 <script>
 import TicketsList from '../../../components/view/ticketsList.vue';
+import ticketExample from './ticketExample.vue';
 export default {
   name: 'viewTicket',
   components: { TicketsList },
+  methods: {
+    sendData() {
+      this.$emit('sendData', ticketExample);
+    },
+  },
 };
 </script>
 

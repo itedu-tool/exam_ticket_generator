@@ -7,20 +7,32 @@
       <InformAboutTicket />
 
       <div class="image">
-        <router-link :to="{ name: 'ticket-edit' }" class="back__image"></router-link>
-        <router-link :to="{ name: 'templateEditingThree' }" class="forward__image"></router-link>
+        <button class="back__image" @click="sendData"></button>
+        <button class="forward__image" @click="sendData"></button>
       </div>
     </div>
-    <router-view />
   </div>
 </template>
 
 <script>
+import editingTicketOne from './editingTicketOne.vue';
+import editingTicketThree from './editingTicketThree.vue';
 import InformAboutTicket from '@/components/create/informAboutTicket.vue';
 
 export default {
   name: 'editingTicketTwo',
   components: { InformAboutTicket },
+  methods: {
+    sendData(event) {
+      if (event.target == document.querySelector('.back__image')) {
+        console.log('back');
+        this.$emit('sendData', editingTicketOne);
+      } else {
+        console.log('forward');
+        this.$emit('sendData', editingTicketThree);
+      }
+    },
+  },
 };
 </script>
 

@@ -10,21 +10,26 @@
         <div class="box__image">
           <button class="button">Создать шаблон</button>
           <div class="image">
-            <router-link :to="{ name: 'ticket-creating' }" class="back__image"></router-link>
+            <button class="back__image" @click="sendData"></button>
             <a class="forward__image"></a>
           </div>
         </div>
       </div>
     </div>
-    <router-view />
   </div>
 </template>
 
 <script>
+import firstCreatingTemplateVue from './firstCreatingTemplate.vue';
 import DatabaseQuestions from '../../../components/create/questions/databaseQuestions.vue';
 export default {
   name: 'secondCreatingTemplate',
   components: { DatabaseQuestions },
+  methods: {
+    sendData() {
+      this.$emit('sendData', firstCreatingTemplateVue);
+    },
+  },
 };
 </script>
 

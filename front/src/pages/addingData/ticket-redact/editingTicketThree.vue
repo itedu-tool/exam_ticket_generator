@@ -10,21 +10,26 @@
         <div class="box__image">
           <button class="button">Сохранить изменения</button>
           <div class="image">
-            <router-link :to="{ name: 'templateEditingTwo' }" class="back__image"></router-link>
+            <button class="back__image" @click="sendData"></button>
             <a class="forward__image"></a>
           </div>
         </div>
       </div>
     </div>
-    <router-view />
   </div>
 </template>
 
 <script>
+import editingTicketTwo from './editingTicketTwo.vue';
 import DatabaseQuestions from '../../../components/create/questions/databaseQuestions.vue';
 export default {
   name: 'editingTicketThree',
   components: { DatabaseQuestions },
+  methods: {
+    sendData() {
+      this.$emit('sendData', editingTicketTwo);
+    },
+  },
 };
 </script>
 

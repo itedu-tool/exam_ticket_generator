@@ -1,7 +1,9 @@
 * {
     font-family: 'Inter', sans-serif;
   }
-
+  button{
+    background-color: #fff;
+  }
   .editing__ticket__three {
     width: 100%;
 

@@ -25,16 +25,21 @@
         <h1 class="tickets__text">Билетов</h1>
       </div>
       <div class="router-link__box__size">
-        <router-link class="router-link" :to="{ name: 'successfully' }">Сгенерировать</router-link>
+        <button class="router-link" @click="sendData">Сгенерировать</button>
       </div>
-      <router-view />
     </div>
   </div>
 </template>
 
-<script>
+<script scoped>
+import ticketsGenerationTwo from './ticketsGenerationTwo.vue';
 export default {
-  name: 'generationTicket',
+  name: 'ticketsGenerationOne',
+  methods: {
+    sendData() {
+      this.$emit('sendData', ticketsGenerationTwo);
+    },
+  },
 };
 </script>
 

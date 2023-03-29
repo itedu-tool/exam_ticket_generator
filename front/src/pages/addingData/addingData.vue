@@ -3,34 +3,55 @@
     <div class="tickets__control">
       <h1 class="control__title">Управление билетами</h1>
       <div class="button__box">
-        <router-link :to="{ name: 'viewTicket' }" class="router-link" @click="allFunc()">Посмотреть</router-link>
-        <router-link :to="{ name: 'ticket-creating' }" class="router-link" @click="allFunc()">Создать</router-link>
-        <router-link :to="{ name: 'ticket-edit' }" class="router-link" @click="allFunc()">Редактировать</router-link>
-        <router-link :to="{ name: 'ticket-generation' }" class="router-link" @click="mainSizeMin()"
-          >Сгенерировать
-        </router-link>
+        <button class="button" @click="component = 'viewTicket'">Посмотреть</button>
+        <button class="button" @click="component = 'firstCreatingTemplate'">Создать</button>
+        <button class="button" @click="component = 'editingTicketOne'">Редактировать</button>
+        <button class="button" @click="component = 'ticketsGenerationOne'">Сгенерировать</button>
       </div>
     </div>
 
     <div class="main__block">
-      <appSlot>
-        <template v-slot:default>
-          <view-ticket></view-ticket>
-        </template>
-      </appSlot>
+      <component :is="component" @sendData="childComponent"></component>
     </div>
   </div>
 </template>
 
 <script>
-import appSlot from '@/pages/slots/slot.vue';
 import viewTicket from './ticket-view/viewTicket.vue';
+import ticketExample from './ticket-view/ticketExample.vue';
+import firstCreatingTemplate from './ticket-creating/firstCreatingTemplate.vue';
+import secondCreatingTemplate from './ticket-creating/secondCreatingTemplate.vue';
+import editingTicketOne from './ticket-redact/editingTicketOne.vue';
+import editingTicketTwo from './ticket-redact/editingTicketTwo.vue';
+import editingTicketThree from './ticket-redact/editingTicketThree.vue';
+import ticketsGenerationOne from './ticket-generation/ticketsGenerationOne.vue';
+import ticketsGenerationTwo from './ticket-generation/ticketsGenerationTwo.vue';
 export default {
   name: 'addingData',
 
-  components: { appSlot, viewTicket },
+  components: {
+    viewTicket,
+    ticketExample,
+    firstCreatingTemplate,
+    secondCreatingTemplate,
+    editingTicketOne,
+    editingTicketTwo,
+    editingTicketThree,
+    ticketsGenerationOne,
+    ticketsGenerationTwo,
+  },
+
+  data() {
+    return {
+      component: 'viewTicket',
+    };
+  },
 
   methods: {
+    childComponent(data) {
+      this.component = `${data.name}`;
+    },
+
     allFunc: function () {
       this.mainSizeNormal();
       this.deleteElement();
@@ -48,9 +69,6 @@ export default {
     },
   },
   mounted() {
-    if (document.querySelector('.main__block').childNodes.length > 2) {
-      document.querySelector('.main__block__p').remove();
-    }
     if (document.querySelector('.tickets__generation__one') || document.querySelector('.tickets__generation__two')) {
       document.querySelector('.main__block').style.width = 'calc(calc(1vw + 1vh) * 20)';
     }

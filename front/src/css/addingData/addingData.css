@@ -54,7 +54,7 @@
   align-items: center;
 }
 
-.router-link {
+.button {
   width: 100%;
   background-color: rgba(64, 93, 145, 1);
   color: rgba(255, 255, 255, 1);
@@ -64,7 +64,7 @@
   font-size: calc(calc(1vw + 1vh) * 1);
 }
 
-.router-link:not(:last-child) {
+.button:not(:last-child) {
   margin-bottom: calc(1vw + 1vh);
 }
 
@@ -79,13 +79,13 @@
     height: calc(calc(1vw + 1vh) * 10);
   }
 
-  .router-link {
+  .button {
     margin-bottom: calc(1vw + 1vh);
     width: 25%;
     font-size: calc(calc(1vw + 1vh) * 0.8);
   }
 
-  .router-link:not(:last-child) {
+  .button:not(:last-child) {
     margin-right: calc(1vw + 1vh);
   }
 

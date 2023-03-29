@@ -1,7 +1,9 @@
 * {
     color: rgba(64, 93, 145, 1);
   }
-
+  button{
+    background-color: #fff;
+  }
   .flex {
     width: 100%;
     display: flex;

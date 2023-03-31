@@ -11,9 +11,6 @@
     justify-content: center;
   }
 
-  .flex-container {
-    width: 90%;
-  }
 
   /* header */
 
@@ -45,7 +42,9 @@
     margin-right: calc(1vw + 1vh);
   }
 
-  .image {
+  
+  .box .image {
+    margin-top: 15px;
     display: flex;
   }
 

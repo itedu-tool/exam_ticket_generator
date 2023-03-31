@@ -77,6 +77,6 @@ h2 {
   text-align: center;
   padding: 10px;
   font-size: calc(calc(1vw + 1vh));
-  text-decoration: underline;
+  text-decoration: underline #405d91;
 }
 </style>

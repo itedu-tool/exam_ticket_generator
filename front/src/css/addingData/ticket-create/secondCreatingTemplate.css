@@ -11,9 +11,6 @@
     justify-content: center;
   }
 
-  .flex-container {
-    width: 90%;
-  }
 
   /* header */
 
@@ -35,22 +32,25 @@
     align-items: flex-end;
   }
 
-  .button {
+  .box .button {
     color: rgba(255, 255, 255, 1);
     padding: calc((1vw + 1vh) / 1.5);
     background-color: rgba(64, 93, 145, 1);
     border-radius: 40px;
     font-size: calc((1vw + 1vh) / 1.25);
     border: none;
+
   }
   .box__image {
+
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-right: calc(1vw + 1vh);
   }
 
-  .image {
+  .box .image {
+    margin-top: 15px;
     display: flex;
   }
 

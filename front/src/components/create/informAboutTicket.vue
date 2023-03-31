@@ -9,7 +9,7 @@
     <InputFields msg="Название предмета" @dataTransmission="getStorageData" />
     <InputFields msg="Факультет" @dataTransmission="getStorageData" />
     <InputFields msg="Экзаменатор" @dataTransmission="getStorageData" />
-    <InputFields msg="Направление подготовки/Специальность" @dataTransmission="getStorageData" />
+    <InputFields msg="Направление подготовки/cпециальность" @dataTransmission="getStorageData" />
     <InputFields msg="Председатель ЦК" @dataTransmission="getStorageData" />
   </div>
 </template>

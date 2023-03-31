@@ -7,17 +7,15 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 25px;
 
   background-color: rgba(64, 93, 145, 1);
-  height: calc(calc(1vw + 1vh) * 4);
   color: rgba(255, 255, 255, 1);
-  font-size: calc(calc(1vw + 1vh) * 1);
+  font-size: calc(calc(1vw + 1vh) * 0.8);
 }
 
 .nav__body {
   margin-right: calc(calc(1vw + 1vh) * 5);
-  padding: 25px;
+  padding: 10px;
 }
 
 .nav__text {
@@ -50,16 +48,16 @@
 
 .title {
   color: rgba(64, 93, 145, 1);
-  margin: calc(calc(1vw + 1vh)) 0;
+  margin: 10px 0;
   font-weight: bold;
-  font-size: calc(calc(1vw + 1vh) * 1.5);
+  font-size: calc(calc(1vw + 1vh) * 1.2);
 }
 
 .text {
-  margin-bottom: calc(calc(1vw + 1vh));
+  margin-bottom: 15px;
 
-  font-size: calc(calc(1vw + 1vh) * 1.5);
-  max-width: 700px;
+  font-size: calc(calc(1vw + 1vh) * 1);
+  max-width: 500px;
   line-height: normal;
   text-align: center;
 }

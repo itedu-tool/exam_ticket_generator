@@ -1,26 +1,76 @@
 <template>
   <div class="registration-teacher">
-    <form action="" class="form">
+    <form class="form" v-on:submit.prevent="register" method="post">
       <h2 class="registration__rectangle__title">Регистрация</h2>
 
       <div class="teacher__block">
         <img class="info-logo" src="@/assets/img/icon-teacher.svg" alt="" />
 
-        <input type="text" placeholder="ФИО" class="information__input" disabled />
-        <input type="text" placeholder="E-mail" class="information__input" disabled />
-        <input type="text" placeholder="Придумайте пароль" class="information__input" disabled />
-        <input type="text" placeholder="Повторите пароль" class="information__input" disabled />
+        <input v-model="name" type="text" placeholder="ФИО" class="information__input" required />
+        <input v-model="email" type="email" placeholder="E-mail" class="information__input" required />
+        <input v-model="password" type="password" placeholder="Придумайте пароль" class="information__input" required />
+        <input
+          v-model="passwordConfirm"
+          type="password"
+          placeholder="Повторите пароль"
+          class="information__input"
+          required
+        />
       </div>
 
-      <router-link :to="{ name: 'personalAccount' }">
-        <button class="button">Зарегистрироваться</button>
-      </router-link>
+      <button class="button" type="submit">Зарегистрироваться</button>
+
       <div class="autorization">
         <router-link to="/">Уже есть аккаунт? <span>Войти!</span></router-link>
       </div>
     </form>
   </div>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      password: '',
+      passwordConfirm: '',
+    };
+  },
+  methods: {
+    async register() {
+      const ps = this.password;
+      const confirmPs = this.passwordConfirm;
+
+      try {
+        if (ps == confirmPs) {
+          const data = {
+            name: this.name,
+            email: this.email,
+            password: this.password,
+          };
+          await axios.post(`/create_user.php`, data).then((res) => {
+            const userData = res.data;
+            console.log(userData);
+            this.$router.push('/');
+            alert('Пользователь был успешно создан');
+          });
+        } else {
+          alert('Введённые пароли не совпадают');
+        }
+      } catch (error) {
+        if (error.toString().includes('505')) {
+          alert('Почта занята');
+        } else {
+          alert('Ошибка в работе сервера');
+        }
+      }
+    },
+  },
+};
+</script>
 
 <style scoped>
 .registration-teacher {

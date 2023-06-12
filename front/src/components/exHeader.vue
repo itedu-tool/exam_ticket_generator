@@ -2,8 +2,10 @@
   <header class="header">
     <nav class="nav">
       <div class="nav__body">
-        <span><router-link to="/addingData" class="nav__text">Создание билетов</router-link></span>
-        <span><router-link to="/personalAccount" class="nav__text">Личный кабинет</router-link></span>
+        <div v-if="!isAuth">
+          <span><router-link to="/addingData" class="nav__text">Создание билетов</router-link></span>
+          <span><router-link to="/personalAccount" class="nav__text">Личный кабинет</router-link></span>
+        </div>
       </div>
     </nav>
     <div class="title__box">
@@ -18,5 +20,13 @@
     </div>
   </header>
 </template>
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      isAuth: false,
+    };
+  },
+};
+</script>
 <style scoped src="@/css/publicHeader.css"></style>

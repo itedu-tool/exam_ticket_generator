@@ -4,25 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f742299-7c2b-4b1e-a5c5-f8a33f3f8b0b" name="Changes" comment="work on the project structure">
+    <list default="true" id="4f742299-7c2b-4b1e-a5c5-f8a33f3f8b0b" name="Changes" comment="add registration php + axios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/create/informAboutTicket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/create/informAboutTicket.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/addingData/addingData.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/addingData.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/addingData/ticket-creating/firstCreatingTemplate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-creating/firstCreatingTemplate.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/addingData/ticket-creating/secondCreatingTemplate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-creating/secondCreatingTemplate.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/addingData/ticket-generation/ticketsGenerationOne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-generation/ticketsGenerationOne.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/addingData/ticket-generation/ticketsGenerationTwo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-generation/ticketsGenerationTwo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/addingData/ticket-redact/editingTicketOne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-redact/editingTicketOne.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/addingData/ticket-redact/editingTicketThree.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-redact/editingTicketThree.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/addingData/ticket-redact/editingTicketTwo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-redact/editingTicketTwo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/addingData/ticket-view/ticketExample.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-view/ticketExample.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/addingData/ticket-view/viewTicket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/addingData/ticket-view/viewTicket.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/exHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/exHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/publicHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/publicHeader.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/pages/authorization/authorizationTeacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/authorization/authorizationTeacher.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/pages/registration/registTeacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/registration/registTeacher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/slots/slot.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/slots/slot.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,25 +36,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/programming/ticket-generator-mern&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/programming/exam-ticket",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\programming\exam-ticket\back" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\programming\exam-ticket\front\src\css\addingData\ticket-view" />
       <recent name="C:\programming\exam-ticket\front\src\css\addingData\ticket-generation" />
@@ -118,7 +109,9 @@
       <workItem from="1683232526053" duration="56000" />
       <workItem from="1685984431656" duration="995000" />
       <workItem from="1686344575624" duration="12433000" />
-      <workItem from="1686419850289" duration="353000" />
+      <workItem from="1686419850289" duration="8171000" />
+      <workItem from="1686595024634" duration="1193000" />
+      <workItem from="1686598903119" duration="767000" />
     </task>
     <task id="LOCAL-00001" summary="add common footer and header">
       <created>1668366656250</created>
@@ -162,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677943035028</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add registration php + axios">
+      <created>1686420559136</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686420559136</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +213,7 @@
     <MESSAGE value="Update package.json" />
     <MESSAGE value="fixing bugs and errors when merging" />
     <MESSAGE value="work on the project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="work on the project structure" />
+    <MESSAGE value="add registration php + axios" />
+    <option name="LAST_COMMIT_MESSAGE" value="add registration php + axios" />
   </component>
 </project>

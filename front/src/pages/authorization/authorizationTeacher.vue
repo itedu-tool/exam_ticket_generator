@@ -1,15 +1,29 @@
 <template>
   <div class="authorization-teacher">
-    <form action="" class="form">
+    <form class="form" v-on:submit.prevent="auth" method="post">
       <h2 class="authorization__rectangle__title">Авторизация</h2>
       <img src="@/assets/img/icon-teacher.svg" alt="" />
 
-      <input name="name" class="form__information" placeholder="E-mail" type="email" id="email" />
-      <input name="name" class="form__information" placeholder="Пароль" type="password" id="password" />
+      <input
+        v-model="email"
+        name="name"
+        class="form__information"
+        placeholder="E-mail"
+        type="email"
+        id="email"
+        required
+      />
+      <input
+        v-model="password"
+        name="name"
+        class="form__information"
+        placeholder="Пароль"
+        type="password"
+        id="password"
+        required
+      />
 
-      <router-link to="/personalAccount">
-        <button class="button">Войти</button>
-      </router-link>
+      <button class="button" type="submit">Войти</button>
 
       <div class="registration">
         <router-link to="/registrationTeacher">Зарегистрироваться!</router-link>
@@ -19,8 +33,40 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'autorizationTeacher',
+
+  data() {
+    return {
+      email: '',
+      password: '',
+      jwt: '',
+    };
+  },
+  methods: {
+    async auth() {
+      try {
+        const data = {
+          email: this.email,
+          password: this.password,
+        };
+        await axios.post(`/login.php`, data).then((res) => {
+          this.jwt = res.data.jwt;
+          console.log(this.jwt);
+          this.$router.push('/personalAccount');
+          alert('Авторизация прошла успешно');
+        });
+      } catch (error) {
+        if (error.toString().includes('401')) {
+          alert('Ошибка входа');
+        } else {
+          alert('Ошибка в работе сервера');
+        }
+      }
+    },
+  },
 };
 </script>
 

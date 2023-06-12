@@ -4,10 +4,10 @@
 class Database
 {
     // Учётные данные базы данных
-    private $host = "localhost";
-    private $db_name = "exam_ticket_generator";
-    private $username = "root";
-    private $password = "";
+    private $host = "sql7.freesqldatabase.com";
+    private $db_name = "sql7625168";
+    private $username = "sql7625168";
+    private $password = "quPfKqv98I";
     public $conn;
 
     // Получаем соединение с базой данных
@@ -17,7 +17,7 @@ class Database
 
         try {
             $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-            echo "Соединение с БД прошло успешно\n";
+            // echo "Соединение с БД прошло успешно\n";
         } catch (PDOException $exception) {
             echo "Ошибка соединения с БД: " . $exception->getMessage();
         }

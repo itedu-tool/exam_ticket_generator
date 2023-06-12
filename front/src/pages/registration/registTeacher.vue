@@ -41,11 +41,8 @@ export default {
   },
   methods: {
     async register() {
-      const ps = this.password;
-      const confirmPs = this.passwordConfirm;
-
       try {
-        if (ps == confirmPs) {
+        if (this.password == this.passwordConfirm) {
           const data = {
             name: this.name,
             email: this.email,

@@ -21,15 +21,17 @@ import generationTicketTwo from '../pages/addingData/ticket-generation/ticketsGe
 const routes = [
   //роутеры авторизации
   {
-    path: '/',
+    path: '/authorizationTeacher',
     name: 'authorizationTeacher',
     component: authorizationTeacher,
+    alias: '/',
   },
   {
     path: '/registrationTeacher',
     name: 'registrationTeacher',
     component: registrationTeacher,
   },
+
   //роутеры личного кабинета
   {
     path: '/personalAccount',
@@ -89,6 +91,12 @@ const routes = [
         component: generationTicketTwo,
       },
     ],
+  },
+
+  //обработка неверных маршрутов
+  {
+    path: '/:catchAll(.*)',
+    redirect: { name: 'authorizationTeacher' },
   },
 ];
 

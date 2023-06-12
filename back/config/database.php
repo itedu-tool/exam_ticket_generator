@@ -4,10 +4,10 @@
 class Database
 {
     // Учётные данные базы данных
-    private $host = "localhost";
-    private $db_name = "exam_ticket_generator";
-    private $username = "root";
-    private $password = "";
+    private $host = "sql7.freesqldatabase.com";
+    private $db_name = "sql7625168";
+    private $username = "sql7625168";
+    private $password = "quPfKqv98I";
     public $conn;
 
     // Получаем соединение с базой данных

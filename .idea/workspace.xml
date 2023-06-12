@@ -4,13 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f742299-7c2b-4b1e-a5c5-f8a33f3f8b0b" name="Changes" comment="add registration php + axios">
+    <list default="true" id="4f742299-7c2b-4b1e-a5c5-f8a33f3f8b0b" name="Changes" comment="add login php + jwt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/exHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/exHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/css/publicHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/publicHeader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/authorization/authorizationTeacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/authorization/authorizationTeacher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/registration/registTeacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/registration/registTeacher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/composer/ClassLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/composer/InstalledVersions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/composer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/composer/autoload_classmap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/composer/autoload_namespaces.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/composer/autoload_psr4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/composer/autoload_real.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/composer/autoload_static.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/composer/installed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/composer/installed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/composer/platform_check.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/firebase/php-jwt/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/firebase/php-jwt/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/firebase/php-jwt/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/firebase/php-jwt/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/firebase/php-jwt/src/BeforeValidException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/firebase/php-jwt/src/CachedKeySet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/firebase/php-jwt/src/ExpiredException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/firebase/php-jwt/src/JWK.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/firebase/php-jwt/src/JWT.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/firebase/php-jwt/src/Key.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/libs/php-jwt/vendor/firebase/php-jwt/src/SignatureInvalidException.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,24 +55,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/programming/exam-ticket",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/programming/exam-ticket&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\programming\exam-ticket\back" />
@@ -111,7 +130,8 @@
       <workItem from="1686344575624" duration="12433000" />
       <workItem from="1686419850289" duration="8171000" />
       <workItem from="1686595024634" duration="1193000" />
-      <workItem from="1686598903119" duration="767000" />
+      <workItem from="1686598903119" duration="1148000" />
+      <workItem from="1686600221021" duration="203000" />
     </task>
     <task id="LOCAL-00001" summary="add common footer and header">
       <created>1668366656250</created>
@@ -162,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686420559136</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add login php + jwt">
+      <created>1686600071372</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686600071372</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +241,7 @@
     <MESSAGE value="fixing bugs and errors when merging" />
     <MESSAGE value="work on the project structure" />
     <MESSAGE value="add registration php + axios" />
-    <option name="LAST_COMMIT_MESSAGE" value="add registration php + axios" />
+    <MESSAGE value="add login php + jwt" />
+    <option name="LAST_COMMIT_MESSAGE" value="add login php + jwt" />
   </component>
 </project>

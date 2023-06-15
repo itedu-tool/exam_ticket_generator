@@ -53,8 +53,8 @@ export default {
           password: this.password,
         };
         await axios.post(`/login.php`, data).then((res) => {
-          localStorage.jwt = res.data.jwt;
           this.jwt = res.data.jwt;
+          localStorage.setItem('jwt', this.jwt);
           console.log(this.jwt);
           this.$router.push('/personalAccount');
           alert('Авторизация прошла успешно');

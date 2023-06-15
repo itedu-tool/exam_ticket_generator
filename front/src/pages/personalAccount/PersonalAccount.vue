@@ -12,9 +12,7 @@
               <p>Преподаватель</p>
             </div>
           </div>
-          <div class="profile__inner-exit">
-            <router-link to="/" @click="exit">Выйти</router-link>
-          </div>
+          <div class="profile__inner-exit" @click="logout">Выйти</div>
         </div>
       </div>
       <div class="archive">
@@ -95,13 +93,14 @@
 export default {
   data() {
     return {
-      isAuth: true,
       lastPath: null,
     };
   },
   methods: {
-    exit() {
-      localStorage.removeItem('jwt');
+    logout() {
+      delete localStorage.jwt;
+      this.$router.push('/');
+      alert('Вы вышли из системы');
     },
     lastUrl() {
       //получаем предыдущий url

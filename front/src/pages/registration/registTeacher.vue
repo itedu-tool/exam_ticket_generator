@@ -40,6 +40,9 @@ export default {
     };
   },
   methods: {
+    routing() {
+      this.$router.push({ path: `/personalAccount` });
+    },
     async register() {
       try {
         if (this.password == this.passwordConfirm) {

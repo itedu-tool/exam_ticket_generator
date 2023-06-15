@@ -7,6 +7,7 @@ import exPersonalAccount from '../pages/personalAccount/PersonalAccount.vue';
 
 //импорт файлов добавления данных
 import { createRouter, createWebHistory } from 'vue-router';
+
 import addingData from '../pages/addingData/addingData.vue';
 import viewTicket from '../pages/addingData/ticket-view/viewTicket.vue';
 import ticketExample from '../pages/addingData/ticket-view/ticketExample.vue';
@@ -94,6 +95,7 @@ const routes = [
   },
 
   //обработка неверных маршрутов
+  //task переписать редирект. Создать станицу 404 об ошибке.
   {
     path: '/:catchAll(.*)',
     redirect: { name: 'authorizationTeacher' },

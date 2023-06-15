@@ -2,7 +2,7 @@
   <header class="header">
     <nav class="nav">
       <div class="nav__body">
-        <div v-if="!isAuth">
+        <div>
           <span><router-link to="/addingData" class="nav__text">Создание билетов</router-link></span>
           <span><router-link to="/personalAccount" class="nav__text">Личный кабинет</router-link></span>
         </div>
@@ -23,9 +23,7 @@
 <script>
 export default {
   data() {
-    return {
-      isAuth: false,
-    };
+    return {};
   },
 };
 </script>

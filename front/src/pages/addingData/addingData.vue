@@ -44,10 +44,26 @@ export default {
   data() {
     return {
       component: 'viewTicket',
+      lastPath: null,
     };
   },
 
   methods: {
+    lastUrl() {
+      //получаем предыдущий url
+      this.lastPath = this.$router.options.history.state.back;
+      console.log(this.lastPath);
+      //делаем проверку на неавторизованного пользователя
+      if (
+        this.lastPath === '/authorizationTeacher' ||
+        this.lastPath === null ||
+        this.lastPath === '/' ||
+        this.lastPath === '/registrationTeacher'
+      ) {
+        alert('Вы не вошли в систему');
+        this.$router.push({ path: '/authorizationTeacher' });
+      }
+    },
     childComponent(data) {
       this.component = `${data.name}`;
     },
@@ -68,9 +84,17 @@ export default {
       document.querySelector('.main__block').style.width = 'calc(calc(1vw + 1vh) * 35)';
     },
   },
-  mounted() {
+  mountedd() {
     if (document.querySelector('.tickets__generation__one') || document.querySelector('.tickets__generation__two')) {
       document.querySelector('.main__block').style.width = 'calc(calc(1vw + 1vh) * 20)';
+    }
+  },
+  created() {
+    console.log(localStorage.getItem('jwt'));
+    if (localStorage.getItem('jwt') !== null) {
+      this.$router.push({ name: 'addingData' });
+    } else {
+      this.lastUrl();
     }
   },
 };

@@ -13,7 +13,7 @@
             </div>
           </div>
           <div class="profile__inner-exit">
-            <router-link to="/">Выйти</router-link>
+            <router-link to="/" @click="exit">Выйти</router-link>
           </div>
         </div>
       </div>
@@ -91,7 +91,46 @@
   </section>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      isAuth: true,
+      lastPath: null,
+    };
+  },
+  methods: {
+    exit() {
+      localStorage.removeItem('jwt');
+    },
+    lastUrl() {
+      //получаем предыдущий url
+      this.lastPath = this.$router.options.history.state.back;
+      console.log(this.lastPath);
+      //перенаправлем пользоваетля на авторизацию, если url`ом является страницы "авторизация" или "регистрация"
+      if (
+        this.lastPath === '/authorizationTeacher' ||
+        this.lastPath === null ||
+        this.lastPath === '/' ||
+        this.lastPath === '/registrationTeacher'
+      ) {
+        alert('Вы не вошли в систему');
+        this.$router.push({ path: '/authorizationTeacher' });
+      }
+    },
+  },
+  created() {
+    //если токен есть, то переходим на страницу, если его нет, то запрещаем переход,
+    //обращаясь к методу запрета
+    console.log(localStorage.getItem('jwt'));
+    if (localStorage.getItem('jwt') !== null) {
+      this.$router.push({ name: 'personalAccount' });
+    } else {
+      this.lastUrl();
+    }
+  },
+};
+</script>
 
 <style scoped>
 /*personal account-----------*/

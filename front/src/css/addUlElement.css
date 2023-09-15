@@ -27,6 +27,7 @@
     background-color: rgba(217, 217, 217, 1);
     padding: 8px;
     margin: 0;
+    cursor: pointer;
     width: 40%;
     border: none;
   }

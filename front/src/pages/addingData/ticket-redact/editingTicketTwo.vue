@@ -25,10 +25,8 @@ export default {
   methods: {
     sendData(event) {
       if (event.target == document.querySelector('.back__image')) {
-        console.log('back');
         this.$emit('sendData', editingTicketOne);
       } else {
-        console.log('forward');
         this.$emit('sendData', editingTicketThree);
       }
     },

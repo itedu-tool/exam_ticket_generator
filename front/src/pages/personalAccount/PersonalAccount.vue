@@ -121,7 +121,6 @@ export default {
   created() {
     //если токен есть, то переходим на страницу, если его нет, то запрещаем переход,
     //обращаясь к методу запрета
-    console.log(localStorage.getItem('jwt'));
     if (localStorage.getItem('jwt') !== null) {
       this.$router.push({ name: 'personalAccount' });
     } else {

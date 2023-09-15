@@ -36,4 +36,5 @@
   .ul__input {
     font-size: calc(calc(1vw + 1vh) / 1.1);
     font-weight: bold;
+    height: 100%;
   }

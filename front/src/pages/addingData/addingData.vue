@@ -90,7 +90,6 @@ export default {
     }
   },
   created() {
-    console.log(localStorage.getItem('jwt'));
     if (localStorage.getItem('jwt') !== null) {
       this.$router.push({ name: 'addingData' });
     } else {

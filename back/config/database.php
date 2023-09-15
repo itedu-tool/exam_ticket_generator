@@ -4,10 +4,10 @@
 class Database
 {
     // Учётные данные базы данных
-    private $host = "sql7.freesqldatabase.com";
-    private $db_name = "sql7625168";
-    private $username = "sql7625168";
-    private $password = "quPfKqv98I";
+    private $host = "sql.freedb.tech";
+    private $db_name = "freedb_exam__ticket__generator";
+    private $username = "freedb_examGeneratorAdmin";
+    private $password = "72ydW3s2A&p7XHq";
     public $conn;
 
     // Получаем соединение с базой данных

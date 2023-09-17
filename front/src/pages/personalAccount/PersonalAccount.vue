@@ -1,5 +1,6 @@
 <template>
   <section class="personalAccount">
+    <popUp v-if="isShow"></popUp>
     <div class="exPersonalAccount__inner">
       <div class="profile">
         <div class="profile__inner">
@@ -32,12 +33,7 @@
             <div class="adress">
               <div class="adress__inner">
                 <p>Адрес электронной почты</p>
-                <h2>*************@yandex.ru</h2>
-              </div>
-              <div class="adress__add">
-                <p>
-                  Добавить дополнительный адрес<span><img src="@/assets/img/icon-arrow.png" alt="стрелочка" /></span>
-                </p>
+                <h2>{{ email }}</h2>
               </div>
             </div>
             <div class="password">
@@ -49,27 +45,23 @@
                   </div>
                   <h2>***************</h2>
                 </div>
-
-                <div class="password__change">
-                  <p>
-                    Сменить пароль
-                    <span><img src="@/assets/img/icon-arrow.png" alt="стрелочка" /></span>
-                  </p>
-                </div>
               </div>
             </div>
-            <div class="qualification">
-              <div class="qualification__inner">
-                <p>Квалификация</p>
-                <h2>Указать...</h2>
+            <div class="tel">
+              <div class="tel__inner">
+                <p>Телефон</p>
+                <h2>-</h2>
               </div>
             </div>
             <div class="faculty">
               <div class="faculty__inner">
                 <p>Факультет</p>
-                <h2>Указать...</h2>
+                <h2>-</h2>
               </div>
             </div>
+          </div>
+          <div class="detalid-information__button">
+            <button class="button" style="padding: 10px" @click="openPopup">Редактировать данные</button>
           </div>
         </div>
       </div>
@@ -93,6 +85,8 @@
 <script>
 import axios from 'axios';
 
+import popUp from '../../components/popUp.vue';
+
 export default {
   data() {
     return {
@@ -100,7 +94,11 @@ export default {
       email: '',
       password: '',
       lastPath: null,
+      isShow: false,
     };
+  },
+  components: {
+    popUp,
   },
   methods: {
     logout() {
@@ -123,15 +121,13 @@ export default {
         this.$router.push({ path: '/authorizationTeacher' });
       }
     },
-    beforeMount() {
-      this.getData();
-    },
   },
   mounted() {
     const data = {
       jwt: localStorage.getItem('jwt'),
     };
 
+    //запрос не асинхронный?
     axios.post(`/validate_token.php`, data).then((res) => {
       this.name = res.data.data.name;
       this.email = res.data.data.email;
@@ -236,7 +232,8 @@ export default {
   background: #ffffff;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   width: auto;
-
+  display: flex;
+  flex-direction: column;
   padding: 30px;
 }
 
@@ -292,6 +289,14 @@ export default {
   cursor: pointer;
 
   padding-left: 10px;
+}
+
+.detalid-information__button {
+  display: flex;
+  justify-content: end;
+}
+.detalid-information__button button {
+  margin-top: 20px;
 }
 
 /* Новости  *******************/

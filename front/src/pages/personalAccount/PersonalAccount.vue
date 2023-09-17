@@ -8,7 +8,7 @@
               <img src="@/assets/img/icon-profile.svg" alt="Аватар" />
             </div>
             <div class="profile__inner-text">
-              <h1>Орехов Михаил Дмитриевич</h1>
+              <h1>{{ name }}</h1>
               <p>Преподаватель</p>
             </div>
           </div>
@@ -52,7 +52,8 @@
 
                 <div class="password__change">
                   <p>
-                    Сменить пароль <span><img src="@/assets/img/icon-arrow.png" alt="стрелочка" /></span>
+                    Сменить пароль
+                    <span><img src="@/assets/img/icon-arrow.png" alt="стрелочка" /></span>
                   </p>
                 </div>
               </div>
@@ -90,9 +91,14 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
+      name: '',
+      email: '',
+      password: '',
       lastPath: null,
     };
   },
@@ -117,6 +123,19 @@ export default {
         this.$router.push({ path: '/authorizationTeacher' });
       }
     },
+    beforeMount() {
+      this.getData();
+    },
+  },
+  mounted() {
+    const data = {
+      jwt: localStorage.getItem('jwt'),
+    };
+
+    axios.post(`/validate_token.php`, data).then((res) => {
+      this.name = res.data.data.name;
+      this.email = res.data.data.email;
+    });
   },
   created() {
     //если токен есть, то переходим на страницу, если его нет, то запрещаем переход,

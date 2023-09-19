@@ -26,6 +26,8 @@ $data = json_decode(file_get_contents("php://input"));
 $user->name = $data->name;
 $user->email = $data->email;
 $user->password = $data->password;
+$user->tel = '-';
+$user->faculty = '-';
 
 // Поверка на существование e-mail в БД
 $email_exists = $user->emailExists();

@@ -47,6 +47,8 @@ if ($email_exists && password_verify($data->password, $user->password)) {
             "id" => $user->id,
             "name" => $user->name,
             "email" => $user->email,
+            "tel" => $user->tel,
+            "faculty" => $user->faculty,
         )
     );
 

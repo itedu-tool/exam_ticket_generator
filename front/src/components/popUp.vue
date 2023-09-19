@@ -1,23 +1,42 @@
 <template>
-  <div class="modal">
+  <div class="modal" @click="closePopUp">
     <div class="popUp">
-      <div class="popUp__inner">
+      <div class="popUp__inner" @click.stop>
         <a href="#" class="popUp__close" @click="closePopUp">X</a>
 
         <div class="popUp__content">
           <h2 class="popUp__title">Редактирование данных</h2>
 
+          <h2 class="popUp__sub-title">Оставьте поля пустыми, если не хотите их редактировать</h2>
+
           <div class="teacher__block">
             <!-- <img class="info-logo" src="@/assets/img/icon-teacher.svg" alt="" /> -->
 
-            <input v-model="name" type="text" placeholder="ФИО" class="information__input" required />
-            <input v-model="email" type="email" placeholder="E-mail" class="information__input" required />
-            <input v-model="password" type="password" placeholder="Пароль" class="information__input" required />
+            <input v-model="name" type="text" placeholder="ФИО" class="information__input" />
+            <input v-model="email" type="email" placeholder="E-mail" class="information__input" />
+            <input
+              v-model="oldpassword"
+              type="password"
+              placeholder="Введите старый пароль"
+              class="information__input"
+            />
+            <input
+              v-model="newPassword"
+              type="password"
+              placeholder="Введите новый пароль"
+              class="information__input"
+            />
+            <input
+              v-model="newPasswordConfirm"
+              type="password"
+              placeholder="Повторите пароль"
+              class="information__input"
+            />
             <input v-model="tel" type="text" placeholder="Телефон" class="information__input" />
             <input v-model="faculty" type="text" placeholder="Факультет" class="information__input" />
           </div>
 
-          <button class="button" type="submit">Редактировать данные</button>
+          <button class="button" @click="updateUser">Редактировать данные</button>
         </div>
       </div>
     </div>
@@ -25,13 +44,51 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'PopUp',
-  isClose: false,
-
+  data() {
+    return {
+      name: '',
+      email: '',
+      oldPassword: '',
+      newPassword: '',
+      newPasswordConfirm: '',
+      tel: '',
+      faculty: '',
+    };
+  },
   methods: {
     closePopUp() {
-      this.isClose = true;
+      this.$emit('close');
+    },
+    async updateUser() {
+      try {
+        if (this.newPassword !== this.newPasswordConfirm) {
+          alert('Введённые пароли не совпадают');
+        } else {
+          const data = {
+            name: this.name,
+            email: this.email,
+            password: this.newPassword,
+            tel: this.tel,
+            faculty: this.faculty,
+            jwt: localStorage.getItem('jwt'),
+          };
+          await axios.post(`/update_user.php`, data).then((res) => {
+            localStorage.setItem('jwt', res.data.jwt);
+            alert('Данные пользователя были успешно обновлены');
+            this.$emit('user-updated'); // Emit a custom event
+          });
+        }
+      } catch (error) {
+        if (error.toString().includes('505')) {
+          alert('Почта занята');
+        } else {
+          alert('Ошибка в работе сервера');
+        }
+      }
     },
   },
 };
@@ -40,7 +97,7 @@ export default {
 <style scoped>
 .modal {
   position: fixed;
-  z-index: 10;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
@@ -70,6 +127,15 @@ export default {
   font-size: 25px;
   text-decoration: none;
   color: #405d91;
+}
+
+.popUp__title {
+  text-align: center;
+}
+.popUp__sub-title {
+  max-width: 500px;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .popUp__content {

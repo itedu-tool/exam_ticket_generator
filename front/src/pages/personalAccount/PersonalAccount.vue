@@ -1,6 +1,6 @@
 <template>
   <section class="personalAccount">
-    <popUp v-if="isShow"></popUp>
+    <popUp v-if="isPopUpVisible" @close="closePopUp" @user-updated="updateUser"></popUp>
     <div class="exPersonalAccount__inner">
       <div class="profile">
         <div class="profile__inner">
@@ -36,27 +36,16 @@
                 <h2>{{ email }}</h2>
               </div>
             </div>
-            <div class="password">
-              <div class="password__inner">
-                <div class="password__inner-content">
-                  <div class="password__inner-show">
-                    <p>Пароль</p>
-                    <a href="#"><img src="@/assets/img/icon-closed-eye.svg" alt="Закрытый глаз" /></a>
-                  </div>
-                  <h2>***************</h2>
-                </div>
-              </div>
-            </div>
             <div class="tel">
               <div class="tel__inner">
                 <p>Телефон</p>
-                <h2>-</h2>
+                <h2>{{ tel }}</h2>
               </div>
             </div>
             <div class="faculty">
               <div class="faculty__inner">
                 <p>Факультет</p>
-                <h2>-</h2>
+                <h2>{{ faculty }}</h2>
               </div>
             </div>
           </div>
@@ -90,11 +79,14 @@ import popUp from '../../components/popUp.vue';
 export default {
   data() {
     return {
+      id: '',
       name: '',
       email: '',
       password: '',
+      tel: '',
+      faculty: '',
+      isPopUpVisible: false,
       lastPath: null,
-      isShow: false,
     };
   },
   components: {
@@ -105,6 +97,24 @@ export default {
       delete localStorage.jwt;
       this.$router.push('/');
       alert('Вы вышли из системы');
+    },
+    updateUser() {
+      const data = {
+        jwt: localStorage.getItem('jwt'),
+      };
+      //запрос не асинхронный?
+      axios.post(`/validate_token.php`, data).then((res) => {
+        this.name = res.data.data.name;
+        this.email = res.data.data.email;
+        this.tel = res.data.data.tel;
+        this.faculty = res.data.data.faculty;
+      });
+    },
+    openPopup() {
+      this.isPopUpVisible = true;
+    },
+    closePopUp() {
+      this.isPopUpVisible = false;
     },
     lastUrl() {
       //получаем предыдущий url
@@ -126,11 +136,13 @@ export default {
     const data = {
       jwt: localStorage.getItem('jwt'),
     };
-
     //запрос не асинхронный?
     axios.post(`/validate_token.php`, data).then((res) => {
+      this.id = res.data.data.id;
       this.name = res.data.data.name;
       this.email = res.data.data.email;
+      this.tel = res.data.data.tel;
+      this.faculty = res.data.data.faculty;
     });
   },
   created() {

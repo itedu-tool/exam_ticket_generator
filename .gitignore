@@ -134,3 +134,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+back/.idea/.gitignore
+back/.idea/back.iml
+back/.idea/modules.xml
+back/.idea/php.xml

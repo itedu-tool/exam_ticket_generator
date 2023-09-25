@@ -14,14 +14,15 @@ include_once "libs/php-jwt/ExpiredException.php";
 include_once "libs/php-jwt/SignatureInvalidException.php";
 include_once "libs/php-jwt/JWT.php";
 include_once "libs/php-jwt/Key.php";
-use \Firebase\JWT\JWT;
-use \Firebase\JWT\Key; 
+
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
  
 // Получаем значение веб-токена JSON
 $data = json_decode(file_get_contents("php://input"));
 
 // Получаем JWT
-$jwt = isset($data->jwt) ? $data->jwt : "";
+$jwt = $data->jwt ?? "";
 
 // Если JWT не пуст
 if ($jwt) {

@@ -58,6 +58,7 @@ export default {
           console.log(this.jwt);
           this.$router.push('/personalAccount');
           alert('Авторизация прошла успешно');
+          // window.location.reload()
         });
       } catch (error) {
         if (error.toString().includes('401')) {

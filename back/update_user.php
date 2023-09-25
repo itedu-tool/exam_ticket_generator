@@ -3,7 +3,7 @@
 // Заголовки
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
-header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Methods: PUT");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
@@ -46,24 +46,28 @@ if ($jwt) {
         $decoded = JWT::decode($jwt, new Key($key, 'HS256'));
 
         // Нам нужно установить отправленные данные (через форму HTML) в свойствах объекта пользователя
-        $user->name = $data->name;
-        $user->email = $data->email;
-        $user->password = $data->password;
-        $user->tel = $data->tel;
-        $user->faculty = $data->faculty;
         $user->id = $decoded->data->id;
+
+        //Получение email
+        foreach ($data as $field => $value) {
+            if ($field === 'email') {
+                $user->email = $value;
+                break;
+            }
+        }
 
         // Поверка на существование e-mail в БД
         $email_exists = $user->emailExists();
 
-        if ($email_exists == true) {
+        if ($email_exists) {
             // Устанавливаем код ответа
-
             http_response_code(505);
-            // Покажем сообщение о том, что создать пользователя не удалось
+            // Покажем сообщение о том, что обновить пользователя не удалось
             echo json_encode(array("message" => "Почта занята"));
-        } else if ($user->update()) {
-            // Создание пользователя
+        } else if ($user->update($data)) {
+            // Получим данные обновлённого пользователя
+            $user->getUser();
+
             // Нам нужно заново сгенерировать JWT, потому что данные пользователя могут отличаться
             $token = array(
                 "iss" => $iss,
@@ -80,7 +84,6 @@ if ($jwt) {
             );
 
             $jwt = JWT::encode($token, $key, 'HS256');
-
             // Код ответа
             http_response_code(200);
 
@@ -88,12 +91,10 @@ if ($jwt) {
             echo json_encode(
                 array(
                     "message" => "Пользователь был обновлён",
-                    "jwt" => $jwt
+                    "jwt" => $jwt,
                 )
             );
-        }
-
-        // Сообщение, если не удается обновить пользователя
+        } // Сообщение, если не удается обновить пользователя
         else {
 
             // Код ответа
@@ -102,8 +103,7 @@ if ($jwt) {
             // Показать сообщение об ошибке
             echo json_encode(array("message" => "Ошибка при обновлении пользователя"));
         }
-    }
-
+    } 
     // Если декодирование не удалось, это означает, что JWT является недействительным
     catch (Exception $e) {
 
@@ -116,8 +116,7 @@ if ($jwt) {
             "error" => $e->getMessage()
         ));
     }
-}
-
+} 
 // Показать сообщение об ошибке, если jwt пуст
 else {
 

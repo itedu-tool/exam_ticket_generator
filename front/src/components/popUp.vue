@@ -2,42 +2,32 @@
   <div class="modal" @click="closePopUp">
     <div class="popUp">
       <div class="popUp__inner" @click.stop>
-        <a href="#" class="popUp__close" @click="closePopUp">X</a>
+        <form class="form" v-on:submit.prevent="updateUser" method="put">
+          <a href="#" class="popUp__close" @click="closePopUp">X</a>
 
-        <div class="popUp__content">
-          <h2 class="popUp__title">Редактирование данных</h2>
+          <div class="popUp__content">
+            <h2 class="popUp__title">Редактирование данных</h2>
 
-          <h2 class="popUp__sub-title">Оставьте поля пустыми, если не хотите их редактировать</h2>
+            <h2 class="popUp__sub-title">Заполните поля, которые хотите редактировать</h2>
 
-          <div class="teacher__block">
-            <!-- <img class="info-logo" src="@/assets/img/icon-teacher.svg" alt="" /> -->
+            <div class="teacher__block">
+              <!-- <img class="info-logo" src="@/assets/img/icon-teacher.svg" alt="" /> -->
 
-            <input v-model="name" type="text" placeholder="ФИО" class="information__input" />
-            <input v-model="email" type="email" placeholder="E-mail" class="information__input" />
-            <input
-              v-model="oldpassword"
-              type="password"
-              placeholder="Введите старый пароль"
-              class="information__input"
-            />
-            <input
-              v-model="newPassword"
-              type="password"
-              placeholder="Введите новый пароль"
-              class="information__input"
-            />
-            <input
-              v-model="newPasswordConfirm"
-              type="password"
-              placeholder="Повторите пароль"
-              class="information__input"
-            />
-            <input v-model="tel" type="text" placeholder="Телефон" class="information__input" />
-            <input v-model="faculty" type="text" placeholder="Факультет" class="information__input" />
+              <input v-model="uploadData.name" type="text" placeholder="ФИО" class="information__input" />
+              <input v-model="uploadData.email" type="email" placeholder="E-mail" class="information__input" />
+              <input
+                v-model="uploadData.newPassword"
+                type="password"
+                placeholder="**********"
+                class="information__input"
+              />
+              <input v-model="uploadData.tel" type="text" placeholder="Телефон" class="information__input" />
+              <input v-model="uploadData.faculty" type="text" placeholder="Факультет" class="information__input" />
+            </div>
+
+            <button class="button" type="submit">Редактировать данные</button>
           </div>
-
-          <button class="button" @click="updateUser">Редактировать данные</button>
-        </div>
+        </form>
       </div>
     </div>
   </div>
@@ -50,13 +40,13 @@ export default {
   name: 'PopUp',
   data() {
     return {
-      name: '',
-      email: '',
-      oldPassword: '',
-      newPassword: '',
-      newPasswordConfirm: '',
-      tel: '',
-      faculty: '',
+      uploadData: {
+        name: '',
+        email: '',
+        newPassword: '',
+        tel: '',
+        faculty: '',
+      },
     };
   },
   methods: {
@@ -65,23 +55,19 @@ export default {
     },
     async updateUser() {
       try {
-        if (this.newPassword !== this.newPasswordConfirm) {
-          alert('Введённые пароли не совпадают');
-        } else {
-          const data = {
-            name: this.name,
-            email: this.email,
-            password: this.newPassword,
-            tel: this.tel,
-            faculty: this.faculty,
-            jwt: localStorage.getItem('jwt'),
-          };
-          await axios.post(`/update_user.php`, data).then((res) => {
-            localStorage.setItem('jwt', res.data.jwt);
-            alert('Данные пользователя были успешно обновлены');
-            this.$emit('user-updated'); // Emit a custom event
-          });
+        const data = {
+          jwt: localStorage.getItem('jwt'),
+        };
+        for (const field in this.uploadData) {
+          if (this.uploadData[field] !== '') {
+            data[field] = this.uploadData[field];
+          }
         }
+        await axios.put(`/update_user.php`, data).then((res) => {
+          localStorage.setItem('jwt', res.data.jwt);
+          alert('Данные пользователя были успешно обновлены');
+          this.$emit('user-updated'); // Emit a custom event
+        });
       } catch (error) {
         if (error.toString().includes('505')) {
           alert('Почта занята');
@@ -116,7 +102,7 @@ export default {
   background: white;
   color: #000;
   max-width: 1200px;
-  padding: 35px;
+  padding: 10px;
   position: relative;
 }
 
@@ -136,6 +122,7 @@ export default {
   max-width: 500px;
   margin-top: 15px;
   text-align: center;
+  font-size: 25px;
 }
 
 .popUp__content {
@@ -150,7 +137,7 @@ export default {
   display: flex;
   justify-self: center;
   margin-top: calc(calc(1vw + 1vh) * 1.25);
-  width: calc(calc(1vw + 1vh) * 11.5);
+  width: calc(calc(1.5vw + 1vh) * 11.5);
   height: calc(calc(1vw + 1vh) * 1.75);
   background: #dee2ea;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);

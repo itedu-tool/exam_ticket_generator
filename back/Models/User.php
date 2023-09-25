@@ -51,7 +51,7 @@ class User
         if ($stmt->execute(array(
             ':name' => $this->name,
             ':email' => $this->email,
-            ':password' =>  $password_hash,
+            ':password' => $password_hash,
             ':tel' => $this->tel,
             ':faculty' => $this->faculty
         ))) {
@@ -61,55 +61,82 @@ class User
     }
 
     // Обновить запись пользователя
-    public function update()
+    public function update($dataToUpdate)
     {
-        // Если в HTML-форме был введен пароль (необходимо обновить пароль)
-        // $password_set = !empty($this->password) ? ", password = :password" : "";
+        // Initialize arrays for update clauses and parameters
+        $updateColumns = [];
+        $updateParams = [];
 
-        // Если не введен пароль - не обновлять пароль
-        $query = "UPDATE " . $this->table_name . "
-             SET
-                 name = :name,
-                 email = :email,
-                 password = :password,
-                 tel = :tel,
-                 faculty = :faculty
-             WHERE id = :id";
+        // Build the SET clause for the update
+        foreach ($dataToUpdate as $column => $value) {
+            if ($column === 'jwt') {
+                continue; // Skip the JWT token field
+            }
+            $updateColumns[] = "$column = :$column";
+            $updateParams[":$column"] = $value;
+        }
+
+        // Construct the SQL update statement
+        $sql = "UPDATE $this->table_name SET " . implode(", ", $updateColumns) . " WHERE id = :id";
+        $updateParams[':id'] = $this->id;
+
+        try {
+            // Prepare the SQL statement
+            $stmt = $this->conn->prepare($sql);
+
+            if (!$stmt) {
+                return false; // Error preparing SQL statement
+            }
+
+            // Bind the parameters using PDO's bindValue
+            foreach ($updateParams as $param => $paramValue) {
+                $stmt->bindValue($param, $paramValue);
+            }
+
+            // Execute the statement
+            if ($stmt->execute()) {
+                return true; // Record updated successfully
+            } else {
+                return false; // Error updating record
+            }
+        } catch (PDOException $e) {
+            // Handle exceptions, log errors, or return false
+            return false;
+        }
+    }
+
+    //Получение user
+    function getUser()
+    {
+        // Запрос, чтобы получить пользователя
+        $query = "SELECT name, email, password, tel, faculty
+            FROM " . $this->table_name . "
+            WHERE id = :id";
 
         // Подготовка запроса
         $stmt = $this->conn->prepare($query);
 
-        // Инъекция (очистка)
-        $this->name = htmlspecialchars(strip_tags($this->name));
-        $this->email = htmlspecialchars(strip_tags($this->email));
-        $this->tel = htmlspecialchars(strip_tags($this->tel));
-        $this->faculty = htmlspecialchars(strip_tags($this->faculty));
+        // Привязываем значение id
+        $stmt->bindParam(':id', $this->id);
 
-        // Привязываем значения с HTML формы
-        $stmt->bindParam(":name", $this->name);
-        $stmt->bindParam(":email", $this->email);
-        $stmt->bindParam(":tel", $this->tel);
-        $stmt->bindParam(":faculty", $this->faculty);
-
-        // Метод password_hash () для защиты пароля пользователя в базе данных
-        if (!empty($this->password)) {
-            $this->password = htmlspecialchars(strip_tags($this->password));
-            $password_hash = password_hash($this->password, PASSWORD_BCRYPT);
-            $stmt->bindParam(":password", $password_hash);
-        }
-
-        // Уникальный идентификатор записи для редактирования
-        $stmt->bindParam(":id", $this->id);
-
-        // Если выполнение успешно, то информация о пользователе будет сохранена в базе данных
         if ($stmt->execute()) {
+            // Получаем значения
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            // Присвоим значения свойствам объекта
+            $this->name = $row["name"];
+            $this->email = $row["email"];
+            $this->password = $row["password"];
+            $this->tel = $row["tel"];
+            $this->faculty = $row["faculty"];
+
             return true;
         }
-
         return false;
     }
 
-    // Проверка, существует ли электронная почта в нашей базе данных
+
+// Проверка, существует ли электронная почта в нашей базе данных
     function emailExists()
     {
         // Запрос, чтобы проверить, существует ли электронная почта
@@ -152,9 +179,5 @@ class User
         }
         // Вернём "false", если адрес электронной почты не существует в базе данных
         return false;
-    }
-
-    function passwordExists()
-    {
     }
 }

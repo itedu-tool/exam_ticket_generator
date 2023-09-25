@@ -11,13 +11,13 @@ class Database
     public $conn;
 
     // Получаем соединение с базой данных
-    public function getConnection()
+    public function getConnection(): ?PDO
     {
         $this->conn = null;
 
         try {
             $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-            // echo "Соединение с БД прошло успешно\n";
+//            echo "Соединение с БД прошло успешно\n";
         } catch (PDOException $exception) {
             echo "Ошибка соединения с БД: " . $exception->getMessage();
         }

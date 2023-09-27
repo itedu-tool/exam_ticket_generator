@@ -51,7 +51,7 @@ export default {
             email: this.email,
             password: this.password,
           };
-          await axios.post(`/create_user.php`, data).then((res) => {
+          await axios.post(`/user/create_user.php`, data).then((res) => {
             const userData = res.data;
             console.log(userData);
             this.$router.push('/');

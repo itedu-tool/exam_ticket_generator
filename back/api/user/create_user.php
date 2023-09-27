@@ -9,14 +9,14 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 // Подключение к БД
 // Файлы, необходимые для подключения к базе данных
-include_once "./config/database.php";
-include_once "./Models/User.php";
+include_once "../../config/database.php";
+include_once "../../Models/User.php";
 
 // Получаем соединение с базой данных
 $database = new Database();
 $db = $database->getConnection();
 
-// Создание объекта "User"
+// Создание объекта "user"
 $user = new User($db);
 
 // Получаем данные

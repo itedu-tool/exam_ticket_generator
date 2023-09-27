@@ -52,7 +52,7 @@ export default {
           email: this.email,
           password: this.password,
         };
-        await axios.post(`/login.php`, data).then((res) => {
+        await axios.post(`/user/login.php`, data).then((res) => {
           this.jwt = res.data.jwt;
           localStorage.setItem('jwt', this.jwt);
           console.log(this.jwt);

@@ -1,55 +1,107 @@
 <template>
   <!-- Блок с базой вопросов -->
   <h1 class="text">База вопросов</h1>
+
   <div class="questions">
-    <TypeOfQuestions typeOfQuestions="Теоритические вопросы" />
-    <TypeOfQuestions typeOfQuestions="Практические задания" />
-  </div>
-
-  <div class="ul__container">
-    <ul class="ul ul-teoretical">
-      <AddUlElement class="teoretical" msg="Введите вопрос" @emitClick="addComponent" />
-      <li v-for="(question, index) in teoreticalQuestions" :key="index">
-        <component :is="question" @click="teoreticalQuestions.slice(index, 1)"></component>
-      </li>
-    </ul>
-
-    <ul class="ul ul-practical">
-      <AddUlElement class="practical" msg="Введите задание" @emitClick="addComponent" />
-      <li v-for="(question, index) in practicalQuestions" :key="index">
-        <component :is="question" @click="practicalQuestions.slice(index, 1)"></component>
-      </li>
-    </ul>
+    <div class="teoretical-questions">
+      <div class="questions__flex-container">
+        <h1 class="questions__title">Теоритические вопросы</h1>
+        <a href="#" class="image__doc"></a>
+      </div>
+      <div class="ul__element">
+        <input
+          class="ul__input"
+          v-model="newTeoreticalQuestionText"
+          type="text"
+          placeholder="Введите теоретический вопрос"
+        />
+        <button class="add__block" @click="addTeoreticalQuestion">Добавить</button>
+      </div>
+      <ul class="questions-list">
+        <li v-for="(question, index) in teoreticalQuestions" :key="index">
+          <div class="ul__element">
+            <input class="ul__input" :placeholder="question.text" disabled />
+            <button class="delete__block" @click="deleteTeoreticalQuestion(index)">X</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="practical-questions">
+      <div class="questions__flex-container">
+        <h1 class="questions__title">Практические вопросы</h1>
+        <a href="#" class="image__doc"></a>
+      </div>
+      <div class="ul__element">
+        <input
+          class="ul__input"
+          v-model="newParticalQuestionText"
+          type="text"
+          placeholder="Введите практический вопрос"
+        />
+        <button class="add__block" @click="addPracticalQuestion">Добавить</button>
+      </div>
+      <ul class="questions-list">
+        <li v-for="(question, index) in practicalQuestions" :key="index">
+          <div class="ul__element">
+            <input class="ul__input" :placeholder="question.text" disabled />
+            <button class="delete__block" @click="deletePracticalQuestion(index)">X</button>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 <script>
-import TypeOfQuestions from './typeOfQuestions.vue';
-import AddUlElement from './addUlElement.vue';
-import DeleteUlElement from './deleteUlElement.vue';
 export default {
-  components: { TypeOfQuestions, AddUlElement, DeleteUlElement },
   data() {
     return {
+      newTeoreticalQuestionText: '',
       teoreticalQuestions: [],
+      newParticalQuestionText: '',
       practicalQuestions: [],
     };
   },
+  watch: {
+    teoreticalQuestions: {
+      handler: 'sendQuestionsToParent',
+      deep: true,
+    },
+    practicalQuestions: {
+      handler: 'sendQuestionsToParent',
+      deep: true,
+    },
+  },
   methods: {
-    addComponent() {
-      this.teoreticalQuestions.push('DeleteUlElement');
-      /*if (event.target.parentElement.className.includes('teoretical')) {
-        if (this.teoreticalQuestions.length >= 2) {
-          alert('Вы не можете добавить больше двух теоритических вопросов');
-          return;
-        }
-        this.teoreticalQuestions.push('DeleteUlElement');
-      } else if (event.target.parentElement.className.includes('practical')) {
-        if (this.practicalQuestions.length >= 2) {
-          alert('Вы не можете добавить больше двух практических вопросов');
-          return;
-        }
-        this.practicalQuestions.push('DeleteUlElement');
-      }*/
+    addTeoreticalQuestion() {
+      if (this.newTeoreticalQuestionText) {
+        const newQuestion = {
+          typeQuestion: 'Теория',
+          text: this.newTeoreticalQuestionText,
+        };
+        this.teoreticalQuestions.push(newQuestion);
+        this.newTeoreticalQuestionText = '';
+      }
+    },
+    deleteTeoreticalQuestion(index) {
+      this.teoreticalQuestions.splice(index, 1);
+    },
+    addPracticalQuestion() {
+      if (this.newParticalQuestionText) {
+        const newQuestion = {
+          typeQuestion: 'Практика',
+          text: this.newParticalQuestionText,
+        };
+        this.practicalQuestions.push(newQuestion);
+        this.newParticalQuestionText = '';
+      }
+    },
+    deletePracticalQuestion(index) {
+      this.practicalQuestions.splice(index, 1);
+    },
+    sendQuestionsToParent() {
+      const allQuestions = [...this.teoreticalQuestions, ...this.practicalQuestions];
+
+      this.$emit('get-questions', allQuestions);
     },
   },
 };

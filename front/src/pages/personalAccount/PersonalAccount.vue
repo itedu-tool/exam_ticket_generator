@@ -103,7 +103,7 @@ export default {
         jwt: localStorage.getItem('jwt'),
       };
       //запрос не асинхронный?
-      axios.post(`/validate_token.php`, data).then((res) => {
+      axios.post(`/user/validate_token.php`, data).then((res) => {
         this.name = res.data.data.name;
         this.email = res.data.data.email;
         this.tel = res.data.data.tel;
@@ -137,7 +137,7 @@ export default {
       jwt: localStorage.getItem('jwt'),
     };
     //запрос не асинхронный?
-    axios.post(`/validate_token.php`, data).then((res) => {
+    axios.post(`/user/validate_token.php`, data).then((res) => {
       this.id = res.data.data.id;
       this.name = res.data.data.name;
       this.email = res.data.data.email;

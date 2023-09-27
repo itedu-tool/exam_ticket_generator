@@ -63,7 +63,7 @@ export default {
             data[field] = this.uploadData[field];
           }
         }
-        await axios.put(`/update_user.php`, data).then((res) => {
+        await axios.put(`/user/update_user.php`, data).then((res) => {
           localStorage.setItem('jwt', res.data.jwt);
           alert('Данные пользователя были успешно обновлены');
           this.$emit('user-updated'); // Emit a custom event

@@ -4,7 +4,7 @@
       <h1 class="control__title">Управление билетами</h1>
       <div class="button__box">
         <button class="button" @click="component = 'viewTicket'">Посмотреть</button>
-        <button class="button" @click="component = 'firstCreatingTemplate'">Создать</button>
+        <button class="button" @click="component = 'createTicket'">Создать</button>
         <button class="button" @click="component = 'editingTicketOne'">Редактировать</button>
         <button class="button" @click="component = 'ticketsGenerationOne'">Сгенерировать</button>
       </div>
@@ -19,8 +19,7 @@
 <script>
 import viewTicket from './ticket-view/viewTicket.vue';
 import ticketExample from './ticket-view/ticketExample.vue';
-import firstCreatingTemplate from './ticket-creating/firstCreatingTemplate.vue';
-import secondCreatingTemplate from './ticket-creating/secondCreatingTemplate.vue';
+import createTicket from './ticket-creating/createTicket.vue';
 import editingTicketOne from './ticket-redact/editingTicketOne.vue';
 import editingTicketTwo from './ticket-redact/editingTicketTwo.vue';
 import editingTicketThree from './ticket-redact/editingTicketThree.vue';
@@ -32,8 +31,7 @@ export default {
   components: {
     viewTicket,
     ticketExample,
-    firstCreatingTemplate,
-    secondCreatingTemplate,
+    createTicket,
     editingTicketOne,
     editingTicketTwo,
     editingTicketThree,
@@ -84,7 +82,7 @@ export default {
       document.querySelector('.main__block').style.width = 'calc(calc(1vw + 1vh) * 35)';
     },
   },
-  mountedd() {
+  mounted() {
     if (document.querySelector('.tickets__generation__one') || document.querySelector('.tickets__generation__two')) {
       document.querySelector('.main__block').style.width = 'calc(calc(1vw + 1vh) * 20)';
     }

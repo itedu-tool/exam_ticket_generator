@@ -4,7 +4,7 @@ class User
 {
     // Подключение к БД таблице "users"
     private $conn;
-    private $table_name = "User";
+    private $table_name = "user";
 
     // Свойства
     public $id;
@@ -13,8 +13,9 @@ class User
     public $password;
     public $tel;
     public $faculty;
+    public $tickets = array();
 
-    // Конструктор класса User
+    // Конструктор класса user
     public function __construct($db)
     {
         $this->conn = $db;
@@ -77,7 +78,7 @@ class User
         }
 
         // Construct the SQL update statement
-        $sql = "UPDATE $this->table_name SET " . implode(", ", $updateColumns) . " WHERE id = :id";
+        $sql = "UPDATE $this->table_name SET " . implode(", ", $updateColumns) . " WHERE userID = :id";
         $updateParams[':id'] = $this->id;
 
         try {
@@ -111,7 +112,7 @@ class User
         // Запрос, чтобы получить пользователя
         $query = "SELECT name, email, password, tel, faculty
             FROM " . $this->table_name . "
-            WHERE id = :id";
+            WHERE userID = :id";
 
         // Подготовка запроса
         $stmt = $this->conn->prepare($query);
@@ -140,7 +141,7 @@ class User
     function emailExists()
     {
         // Запрос, чтобы проверить, существует ли электронная почта
-        $query = "SELECT id, name, email, password, tel, faculty
+        $query = "SELECT userID, name, email, password, tel, faculty
             FROM " . $this->table_name . "
             WHERE email = ?
             LIMIT 0,1";
@@ -161,14 +162,14 @@ class User
         $num = $stmt->rowCount();
 
         // Если электронная почта существует,
-        // Присвоим значения свойствам объекта для легкого доступа и использования для php сессий
+        // присвоим значения свойствам объекта для легкого доступа и использования для php сессий
         if ($num > 0) {
 
             // Получаем значения
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
             // Присвоим значения свойствам объекта
-            $this->id = $row["id"];
+            $this->id = $row["userID"];
             $this->name = $row["name"];
             $this->password = $row["password"];
             $this->tel = $row["tel"];

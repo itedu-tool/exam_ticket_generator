@@ -11,8 +11,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import addingData from '../pages/addingData/addingData.vue';
 import viewTicket from '../pages/addingData/ticket-view/viewTicket.vue';
 import ticketExample from '../pages/addingData/ticket-view/ticketExample.vue';
-import firstCreatingTemplate from '../pages/addingData/ticket-creating/firstCreatingTemplate.vue';
-import secondCreatingTemplate from '../pages/addingData/ticket-creating/secondCreatingTemplate.vue';
+import createTicket from '../pages/addingData/ticket-creating/createTicket.vue';
 import editingTicket from '../pages/addingData/ticket-redact/editingTicketOne.vue';
 import templateEditingTwo from '../pages/addingData/ticket-redact/editingTicketTwo.vue';
 import templateEditingThree from '../pages/addingData/ticket-redact/editingTicketThree.vue';
@@ -57,14 +56,9 @@ const routes = [
         component: ticketExample,
       },
       {
-        path: '/addingData/ticket-creating',
-        name: 'ticket-creating',
-        component: firstCreatingTemplate,
-      },
-      {
-        path: '/addingData/ticket-creating/secondCreating',
-        name: 'secondCreating',
-        component: secondCreatingTemplate,
+        path: '/addingData/createTicket',
+        name: 'createTicket',
+        component: createTicket,
       },
       {
         path: '/addingData/ticket-edit',

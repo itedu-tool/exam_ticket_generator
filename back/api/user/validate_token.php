@@ -8,12 +8,12 @@ header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
  
 // Требуется для декодирования JWT
-include_once "config/core.php";
-include_once "libs/php-jwt/BeforeValidException.php";
-include_once "libs/php-jwt/ExpiredException.php";
-include_once "libs/php-jwt/SignatureInvalidException.php";
-include_once "libs/php-jwt/JWT.php";
-include_once "libs/php-jwt/Key.php";
+include_once "../../config/core.php";
+include_once "../../libs/php-jwt/BeforeValidException.php";
+include_once "../../libs/php-jwt/ExpiredException.php";
+include_once "../../libs/php-jwt/SignatureInvalidException.php";
+include_once "../../libs/php-jwt/JWT.php";
+include_once "../../libs/php-jwt/Key.php";
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;

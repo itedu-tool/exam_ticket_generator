@@ -8,14 +8,14 @@ header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 // Файлы необходимые для соединения с БД
-include_once "./config/database.php";
-include_once "./Models/User.php";
+include_once "../../config/database.php";
+include_once "../../Models/User.php";
 
 // Получаем соединение с базой данных
 $database = new Database();
 $db = $database->getConnection();
 
-// Создание объекта "User"
+// Создание объекта "user"
 $user = new User($db);
 
 // Получаем данные
@@ -26,11 +26,11 @@ $user->email = $data->email;
 $email_exists = $user->emailExists();
 
 // Подключение файлов JWT
-include_once "config/core.php";
-include_once "libs/php-jwt/BeforeValidException.php";
-include_once "libs/php-jwt/ExpiredException.php";
-include_once "libs/php-jwt/SignatureInvalidException.php";
-include_once "libs/php-jwt/JWT.php";
+include_once "../../config/core.php";
+include_once "../../libs/php-jwt/BeforeValidException.php";
+include_once "../../libs/php-jwt/ExpiredException.php";
+include_once "../../libs/php-jwt/SignatureInvalidException.php";
+include_once "../../libs/php-jwt/JWT.php";
 
 use \Firebase\JWT\JWT;
 
@@ -66,12 +66,12 @@ if ($email_exists && password_verify($data->password, $user->password)) {
 }
 
 // Если электронная почта не существует или пароль не совпадает,
-// Сообщим пользователю, что он не может войти в систему
+// сообщим пользователю, что он не может войти в систему
 else {
 
     // Код ответа
     http_response_code(401);
 
-    // Скажем пользователю что войти не удалось
+    // Скажем пользователю, что войти не удалось
     echo json_encode(array("message" => "Ошибка входа"));
 }

@@ -8,26 +8,26 @@ header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 // Требуется для кодирования веб-токена JSON
-include_once "config/core.php";
-include_once "libs/php-jwt/BeforeValidException.php";
-include_once "libs/php-jwt/ExpiredException.php";
-include_once "libs/php-jwt/SignatureInvalidException.php";
-include_once "libs/php-jwt/JWT.php";
-include_once "libs/php-jwt/Key.php";
+include_once "../../config/core.php";
+include_once "../../libs/php-jwt/BeforeValidException.php";
+include_once "../../libs/php-jwt/ExpiredException.php";
+include_once "../../libs/php-jwt/SignatureInvalidException.php";
+include_once "../../libs/php-jwt/JWT.php";
+include_once "../../libs/php-jwt/Key.php";
 
-use \Firebase\JWT\JWT;
-use \Firebase\JWT\Key;
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
 
 // Подключение к БД
 // Файлы, необходимые для подключения к базе данных
-include_once "./config/database.php";
-include_once "./Models/User.php";
+include_once "../../config/database.php";
+include_once "../../Models/User.php";
 
 // Получаем соединение с базой данных
 $database = new Database();
 $db = $database->getConnection();
 
-// Создание объекта "User"
+// Создание объекта "user"
 $user = new User($db);
 
 // Получаем данные
@@ -48,16 +48,17 @@ if ($jwt) {
         // Нам нужно установить отправленные данные (через форму HTML) в свойствах объекта пользователя
         $user->id = $decoded->data->id;
 
+        $email_exists = '';
+
         //Получение email
         foreach ($data as $field => $value) {
             if ($field === 'email') {
                 $user->email = $value;
+                // Поверка на существование e-mail в БД
+                $email_exists = $user->emailExists();
                 break;
             }
         }
-
-        // Поверка на существование e-mail в БД
-        $email_exists = $user->emailExists();
 
         if ($email_exists) {
             // Устанавливаем код ответа

@@ -53,6 +53,7 @@
 </template>
 <script>
 export default {
+  props: ['questions'],
   data() {
     return {
       newTeoreticalQuestionText: '',
@@ -62,6 +63,11 @@ export default {
     };
   },
   watch: {
+    questions: {
+      handler: 'initializeQuestions',
+      immediate: true,
+      deep: true,
+    },
     teoreticalQuestions: {
       handler: 'sendQuestionsToParent',
       deep: true,
@@ -72,6 +78,15 @@ export default {
     },
   },
   methods: {
+    initializeQuestions(newQuestions) {
+      if (this.questions) {
+        this.teoreticalQuestions = newQuestions.filter((question) => question.typeQuestion === 'Теория').slice();
+        this.practicalQuestions = newQuestions.filter((question) => question.typeQuestion === 'Практика').slice();
+      } else {
+        this.teoreticalQuestions = [];
+        this.practicalQuestions = [];
+      }
+    },
     addTeoreticalQuestion() {
       if (this.newTeoreticalQuestionText) {
         const newQuestion = {

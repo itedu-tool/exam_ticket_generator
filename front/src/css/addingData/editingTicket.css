@@ -12,12 +12,16 @@ button {
   justify-content: center;
 }
 
-.main__block__title {
-  font-weight: bold;
-  font-size: calc(calc(1vw + 1vh) * 1.5);
-  font-family: 'Inter', sans-serif;
+.creating__template {
+  font-size: calc(calc(1vw + 1vh) * 1.15);
   text-align: center;
-  margin: calc(1vw + 1vh) 0;
+  margin-bottom: 15px;
+}
+
+.main__block__title {
+  font: bold calc(calc(1vw + 1vh) * 1.5) 'Inter', sans-serif;
+  text-align: center;
+  margin: 0 0;
   color: rgba(64, 93, 145, 1);
 }
 
@@ -35,12 +39,6 @@ button {
   justify-content: flex-end;
 }
 
-.grid__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  justify-items: center;
-}
-
 .flex {
   width: 100%;
   display: flex;
@@ -54,12 +52,6 @@ button {
   flex-direction: column;
   justify-content: center;
   width: 850px;
-}
-
-.creating__template {
-  font-size: calc(calc(1vw + 1vh) * 1.15);
-  text-align: center;
-  margin-bottom: 15px;
 }
 
 

@@ -34,62 +34,23 @@
 
 <script>
 export default {
+  props: ['selectedTicket'],
   data() {
     return {
-      name: '',
-      commission: '',
-      subject: '',
-      faculty: '',
-      examiner: '',
-      specialization: '',
-      chairman: '',
+      name: this.selectedTicket ? this.selectedTicket.name : '',
+      commission: this.selectedTicket ? this.selectedTicket.commission : '',
+      subject: this.selectedTicket ? this.selectedTicket.subject : '',
+      faculty: this.selectedTicket ? this.selectedTicket.faculty : '',
+      examiner: this.selectedTicket ? this.selectedTicket.examiner : '',
+      specialization: this.selectedTicket ? this.selectedTicket.specialization : '',
+      chairman: this.selectedTicket ? this.selectedTicket.chairman : '',
+      ticketID: this.selectedTicket ? this.selectedTicket.ticketID : '',
+      questions: this.selectedTicket ? this.selectedTicket.questions : '',
     };
   },
   methods: {},
-  mounted() {
-    if (
-      localStorage.name ||
-      localStorage.commission ||
-      localStorage.subject ||
-      localStorage.faculty ||
-      localStorage.examiner ||
-      localStorage.specialization ||
-      localStorage.chairman
-    ) {
-      this.name = localStorage.name;
-      this.commission = localStorage.commission;
-      this.subject = localStorage.subject;
-      this.faculty = localStorage.faculty;
-      this.examiner = localStorage.examiner;
-      this.specialization = localStorage.specialization;
-      this.chairman = localStorage.chairman;
-    }
-  },
-  watch: {
-    name(newName) {
-      localStorage.name = newName;
-    },
-    commission(newCommission) {
-      localStorage.commission = newCommission;
-    },
-    subject(newSubject) {
-      localStorage.subject = newSubject;
-    },
-    faculty(newFaculty) {
-      localStorage.faculty = newFaculty;
-    },
-    examiner(newExaminer) {
-      localStorage.examiner = newExaminer;
-    },
-    specialization(newSpecialization) {
-      localStorage.specialization = newSpecialization;
-    },
-    chairman(newChairman) {
-      localStorage.chairman = newChairman;
-    },
-  },
   beforeUnmount() {
-    this.$emit('data-updated', {
+    this.$emit('data-created', {
       name: this.name,
       commission: this.commission,
       subject: this.subject,
@@ -97,6 +58,17 @@ export default {
       examiner: this.examiner,
       specialization: this.specialization,
       chairman: this.chairman,
+    });
+    this.$emit('data-updated', {
+      ticketID: this.ticketID,
+      name: this.name,
+      commission: this.commission,
+      subject: this.subject,
+      faculty: this.faculty,
+      examiner: this.examiner,
+      specialization: this.specialization,
+      chairman: this.chairman,
+      questions: this.questions,
     });
   },
 };

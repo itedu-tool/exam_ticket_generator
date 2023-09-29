@@ -3,7 +3,7 @@
     <div class="template__container" v-if="currentComponent === 'informAboutTicket'">
       <div class="flex">
         <h1 class="creating__template">Создание шаблона 1/2</h1>
-        <InformAboutTicket @data-updated="updateData" />
+        <InformAboutTicket @data-created="createData" />
       </div>
       <div class="image">
         <a class="back__image-first"></a>
@@ -50,7 +50,7 @@ export default {
     nextComponent(componentName) {
       this.currentComponent = componentName;
     },
-    updateData(newData) {
+    createData(newData) {
       this.data = { ...this.data, ...newData };
     },
     async createTicket() {

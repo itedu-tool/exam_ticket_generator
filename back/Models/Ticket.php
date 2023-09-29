@@ -144,7 +144,7 @@ function updateTicket($db, $ticket)
         ':chairman' => $ticket->chairman
     ));
 
-    //Удаления вопросов которые есть в БД
+    //Удаление вопросов которые есть в БД
     $deleteQuestionsSQL = "DELETE FROM Question WHERE ticketID = :ticketID";
     $stmt = $db->prepare($deleteQuestionsSQL);
     $stmt->bindParam(':ticketID', $ticket->ticketID, PDO::PARAM_INT);
@@ -188,4 +188,53 @@ function updateTicket($db, $ticket)
         return false;
     }
 
+}
+
+function getAll_tickets($db, $ticket)
+{
+    $query = "SELECT et.*, q.questionID, q.text, q.typeQuestion
+          FROM ExamTicket et
+          LEFT JOIN Question q ON et.ticketID = q.ticketID
+          WHERE et.userID = :userID";
+    $stmt = $db->prepare($query);
+    $stmt->bindParam(':userID', $ticket->userID, PDO::PARAM_INT);
+
+    if ($stmt->execute()) {
+
+        $result = [];
+
+        // Fetch the results and group questions by ExamTicket
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $ticketID = $row['ticketID'];
+
+            // If the ticket ID is not in the result, create a new entry
+            if (!isset($result[$ticketID])) {
+                $result[$ticketID] = [
+                    'ticketID' => $row['ticketID'],
+                    'name' => $row['name'],
+                    'commission' => $row['commission'],
+                    'subject' => $row['subject'],
+                    'faculty' => $row['faculty'],
+                    'examiner' => $row['examiner'],
+                    'specialization' => $row['specialization'],
+                    'chairman' => $row['chairman'],
+                    'userID' => $row['userID'],
+                    'questions' => [],
+                ];
+            }
+
+            // Add the question to the questions array of the ExamTicket
+            $result[$ticketID]['questions'][] = [
+                'questionID' => $row['questionID'],
+                'text' => $row['text'],
+                'typeQuestion' => $row['typeQuestion'],
+            ];
+        }
+
+// Convert the result array to a simple indexed array
+        $result = array_values($result);
+        return $result;
+    } else {
+        return 0;
+    }
 }

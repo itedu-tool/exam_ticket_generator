@@ -5,7 +5,7 @@
       <div class="button__box">
         <button class="button" @click="component = 'viewTicket'">Посмотреть</button>
         <button class="button" @click="component = 'createTicket'">Создать</button>
-        <button class="button" @click="component = 'editingTicketOne'">Редактировать</button>
+        <button class="button" @click="component = 'editTicket'">Редактировать</button>
         <button class="button" @click="component = 'ticketsGenerationOne'">Сгенерировать</button>
       </div>
     </div>
@@ -18,11 +18,8 @@
 
 <script>
 import viewTicket from './ticket-view/viewTicket.vue';
-import ticketExample from './ticket-view/ticketExample.vue';
 import createTicket from './ticket-creating/createTicket.vue';
-import editingTicketOne from './ticket-redact/editingTicketOne.vue';
-import editingTicketTwo from './ticket-redact/editingTicketTwo.vue';
-import editingTicketThree from './ticket-redact/editingTicketThree.vue';
+import editTicket from './ticket-redact/editTicket.vue';
 import ticketsGenerationOne from './ticket-generation/ticketsGenerationOne.vue';
 import ticketsGenerationTwo from './ticket-generation/ticketsGenerationTwo.vue';
 export default {
@@ -30,11 +27,8 @@ export default {
 
   components: {
     viewTicket,
-    ticketExample,
     createTicket,
-    editingTicketOne,
-    editingTicketTwo,
-    editingTicketThree,
+    editTicket,
     ticketsGenerationOne,
     ticketsGenerationTwo,
   },

@@ -10,11 +10,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import addingData from '../pages/addingData/addingData.vue';
 import viewTicket from '../pages/addingData/ticket-view/viewTicket.vue';
-import ticketExample from '../pages/addingData/ticket-view/ticketExample.vue';
 import createTicket from '../pages/addingData/ticket-creating/createTicket.vue';
-import editingTicket from '../pages/addingData/ticket-redact/editingTicketOne.vue';
-import templateEditingTwo from '../pages/addingData/ticket-redact/editingTicketTwo.vue';
-import templateEditingThree from '../pages/addingData/ticket-redact/editingTicketThree.vue';
+import editingTicket from '../pages/addingData/ticket-redact/editTicket.vue';
 import generationTicket from '../pages/addingData/ticket-generation/ticketsGenerationOne.vue';
 import generationTicketTwo from '../pages/addingData/ticket-generation/ticketsGenerationTwo.vue';
 
@@ -51,11 +48,6 @@ const routes = [
         component: viewTicket,
       },
       {
-        path: '/addingData/viewTicket/ticketExample',
-        name: 'ticketExample',
-        component: ticketExample,
-      },
-      {
         path: '/addingData/createTicket',
         name: 'createTicket',
         component: createTicket,
@@ -64,16 +56,6 @@ const routes = [
         path: '/addingData/ticket-edit',
         name: 'ticket-edit',
         component: editingTicket,
-      },
-      {
-        path: '/addingData/ticket-edit/templateEditingTwo',
-        name: 'templateEditingTwo',
-        component: templateEditingTwo,
-      },
-      {
-        path: '/addingData/ticket-edit/templateEditingThree',
-        name: 'templateEditingThree',
-        component: templateEditingThree,
       },
       {
         path: '/addingData/ticket-generation',

@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import InformAboutTicket from '../../../components/create/informAboutTicket.vue';
-import DatabaseQuestions from '../../../components/create/questions/databaseQuestions.vue';
+import InformAboutTicket from '../../../components/informAboutTicket.vue';
+import DatabaseQuestions from '../../../components/databaseQuestions.vue';
 import axios from 'axios';
 
 export default {
@@ -42,7 +42,6 @@ export default {
     return {
       data: {
         questions: [],
-        id: '',
       },
       currentComponent: 'informAboutTicket',
     };
@@ -55,12 +54,13 @@ export default {
       this.data = { ...this.data, ...newData };
     },
     async createTicket() {
+      let id;
       try {
         const userData = {
           jwt: localStorage.getItem('jwt'),
         };
         await axios.post(`/user/validate_token.php`, userData).then((res) => {
-          this.id = res.data.data.id;
+          id = res.data.data.id;
         });
         const data = {
           name: this.data.name,
@@ -71,7 +71,7 @@ export default {
           specialization: this.data.specialization,
           chairman: this.data.chairman,
           questions: this.data.questions,
-          userID: this.id,
+          userID: id,
         };
         await axios.post(`/ticket/create_ticket.php`, data).then(() => {
           alert('Билет был успешно создан');

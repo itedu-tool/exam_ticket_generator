@@ -1,0 +1,205 @@
+.template__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 850px;
+}
+
+.main__block__title {
+  font: bold calc(calc(1vw + 1vh) * 1.5) 'Inter', sans-serif;
+  text-align: center;
+  margin: 0 0;
+  color: rgba(64, 93, 145, 1);
+}
+
+.main__block__text {
+  font: bold calc(calc(1vw + 1vh) * 1.25) 'Inter', sans-serif;
+  margin-top: calc(1vw + 1vh);
+  margin-left: 5%;
+  color: rgba(64, 93, 145, 1);
+  margin-bottom: 25px;
+}
+
+ul, li {
+  list-style:none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.main__block__no-ticket {
+  display: flex;
+  height: 370px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket {
+  display: flex;
+  margin-bottom: 10px;
+}
+.ticket:hover {
+  background: #e1e1e1;
+  border: 1px solid #d0d0d0;
+}
+
+.ticket__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ticket__name {
+  font-size: calc(calc(0.9vw + 0.9vh) * 1.25);
+  margin-bottom: 10px;
+}
+.ticket__text {
+  font-size: calc(calc(0.6vw + 0.6vh) * 1.25);
+  margin-bottom: 5px;
+}
+.ticket__subject{
+  font-size: calc(calc(0.7vw + 0.7vh) * 1.25);
+  margin-bottom: 10px;
+}
+
+.ticket__image {
+  width: inherit;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: rgba(64, 93, 145, 1);
+  color: #fff;
+}
+
+button {
+  background-color: #fff;
+}
+
+/*ВТОРОЙ КОМПОНЕНТ*/
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 35%;
+  cursor: pointer;
+}
+
+.back__image {
+  background-image: url(@/assets/back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(calc(1vw + 1vh) * 1.15);
+  width: calc(calc(1vw + 1vh) * 1.15);
+  margin-right: calc(1vw + 1vh);
+}
+
+.back__text {
+  font: calc(calc(1vw + 1vh) * 1.25) 'Inter', sans-serif;
+  color: rgba(64, 93, 145, 1);
+  margin: 0;
+}
+
+/*.main__block__title {*/
+/*  display: flex;*/
+/*  justify-content: flex-start;*/
+/*  font: bold calc(calc(1vw + 1vh) * 1.5) 'Inter', sans-serif;*/
+/*  margin: 15px 0;*/
+/*  color: rgba(64, 93, 145, 1);*/
+/*  width: 100%;*/
+/*}*/
+
+/*.main__block__text {*/
+/*  font: bold 28px 'Inter', sans-serif;*/
+/*  margin: 0;*/
+/*  color: rgba(64, 93, 145, 1);*/
+/*  margin-left: 66px;*/
+/*}*/
+
+.ticket__example {
+  display: flex;
+  justify-content: center;
+}
+
+.ticket__example h2, p {
+  text-align: center;
+ color: black;
+}
+
+.ticket__example h2 {
+  font-size: 20px;
+}
+
+hr {
+  border: 1px solid black;
+  max-width: 80%;
+  margin-bottom: 15px;
+}
+
+.mb {
+  margin-bottom: 35px;
+}
+
+.text__university-group {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 0 auto 35px;
+}
+
+.main__container {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.inner__container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 90%;
+}
+
+/*.inner__container > * {*/
+/*  font: calc(calc(1vw + 1vh) / 1.5) 'Inter', sans-serif;*/
+/*  margin-bottom: calc(calc(1vw + 1vh) / 1.15);*/
+/*}*/
+
+
+.teachers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.teachers > h1 {
+  font: calc(calc(1vw + 1vh) / 1.5) 'Inter', sans-serif;
+  margin: 0;
+}
+
+.questions li {
+  list-style-type: numeric;
+}
+
+

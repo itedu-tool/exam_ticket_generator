@@ -16,10 +16,4 @@ class Question
     {
         $this->conn = $db;
     }
-
-    // Метод для создания новых вопросов
-    function createQuestions($questions)
-    {
-
-    }
 }

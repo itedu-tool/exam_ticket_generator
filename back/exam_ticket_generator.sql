@@ -37,7 +37,7 @@ CREATE TABLE `ExamTicket` (
   `specialization` varchar(255) NOT NULL,
   `chairman` varchar(255) NOT NULL,
   `userID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `ExamTicket`
@@ -106,10 +106,10 @@ INSERT INTO `ExamTicket` (`ticketID`, `name`, `commission`, `subject`, `faculty`
 
 CREATE TABLE `Question` (
   `questionID` int NOT NULL,
-  `typeQuestion` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `typeQuestion` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `text` varchar(255) NOT NULL,
   `ticketID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `Question`
@@ -298,10 +298,10 @@ CREATE TABLE `User` (
   `userID` int NOT NULL,
   `name` varchar(25) NOT NULL,
   `email` varchar(25) NOT NULL,
-  `password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `tel` varchar(25) DEFAULT NULL,
   `faculty` varchar(25) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `User`

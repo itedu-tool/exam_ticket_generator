@@ -6,7 +6,7 @@
         <button class="button" @click="component = 'viewTicket'">Посмотреть</button>
         <button class="button" @click="component = 'createTicket'">Создать</button>
         <button class="button" @click="component = 'editTicket'">Редактировать</button>
-        <button class="button" @click="component = 'ticketsGenerationOne'">Сгенерировать</button>
+        <button class="button" @click="component = 'generationTickets'">Сгенерировать</button>
       </div>
     </div>
 
@@ -20,8 +20,7 @@
 import viewTicket from './ticket-view/viewTicket.vue';
 import createTicket from './ticket-creating/createTicket.vue';
 import editTicket from './ticket-redact/editTicket.vue';
-import ticketsGenerationOne from './ticket-generation/ticketsGenerationOne.vue';
-import ticketsGenerationTwo from './ticket-generation/ticketsGenerationTwo.vue';
+import generationTickets from './ticket-generation/generationTickets.vue';
 export default {
   name: 'addingData',
 
@@ -29,8 +28,7 @@ export default {
     viewTicket,
     createTicket,
     editTicket,
-    ticketsGenerationOne,
-    ticketsGenerationTwo,
+    generationTickets,
   },
 
   data() {

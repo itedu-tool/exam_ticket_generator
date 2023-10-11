@@ -10,6 +10,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 850px;
 }
 
 .creating__template {

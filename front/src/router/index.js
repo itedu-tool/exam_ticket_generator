@@ -12,8 +12,7 @@ import addingData from '../pages/addingData/addingData.vue';
 import viewTicket from '../pages/addingData/ticket-view/viewTicket.vue';
 import createTicket from '../pages/addingData/ticket-creating/createTicket.vue';
 import editingTicket from '../pages/addingData/ticket-redact/editTicket.vue';
-import generationTicket from '../pages/addingData/ticket-generation/ticketsGenerationOne.vue';
-import generationTicketTwo from '../pages/addingData/ticket-generation/ticketsGenerationTwo.vue';
+import generationTicket from '../pages/addingData/ticket-generation/generationTickets.vue';
 
 const routes = [
   //роутеры авторизации
@@ -61,11 +60,6 @@ const routes = [
         path: '/addingData/ticket-generation',
         name: 'ticket-generation',
         component: generationTicket,
-      },
-      {
-        path: '/addingData/ticket-generation/successfully',
-        name: 'successfully',
-        component: generationTicketTwo,
       },
     ],
   },

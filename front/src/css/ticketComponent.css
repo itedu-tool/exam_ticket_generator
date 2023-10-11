@@ -2,6 +2,7 @@
 .ticket__example {
   display: flex;
   justify-content: center;
+  margin-top: 35px;
 }
 
 .ticket__example h2, p {

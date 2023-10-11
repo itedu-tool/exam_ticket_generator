@@ -30,9 +30,6 @@ $ticket->examiner = $data->examiner;
 $ticket->specialization = $data->specialization;
 $ticket->chairman = $data->chairman;
 $ticket->userID = $data->userID;
-//$ticket->questions = $data->questions;
-
-//echo json_encode(array("Билет" => $ticket));
 
 foreach ($data->questions as $questionData) {
     $question = new Question($db);
